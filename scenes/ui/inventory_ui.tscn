@@ -1,0 +1,34 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/ui/inventory_ui.gd" id="1"]
+
+[node name="InventoryUI" type="CanvasLayer"]
+script = ExtResource("1")
+
+[node name="Root" type="Control" parent="."]
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 216.0
+offset_bottom = 220.0
+
+[node name="PanelContainer" type="PanelContainer" parent="Root"]
+layout_mode = 0
+offset_right = 200.0
+offset_bottom = 204.0
+
+[node name="MarginContainer" type="MarginContainer" parent="Root/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="Content" type="VBoxContainer" parent="Root/PanelContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="TitleLabel" type="Label" parent="Root/PanelContainer/MarginContainer/Content"]
+layout_mode = 2
+text = "Inventory"
+
+[node name="ItemList" type="VBoxContainer" parent="Root/PanelContainer/MarginContainer/Content"]
+layout_mode = 2
