@@ -1,12 +1,17 @@
-[gd_scene load_steps=8 format=3]
+[gd_scene load_steps=13 format=3]
 
 [ext_resource type="Script" path="res://scripts/world/grid_visual.gd" id="1"]
 [ext_resource type="PackedScene" path="res://scenes/player/player.tscn" id="2"]
 [ext_resource type="PackedScene" path="res://scenes/items/item.tscn" id="3"]
-[ext_resource type="Resource" path="res://resources/items/potion.tres" id="4"]
-[ext_resource type="Resource" path="res://resources/items/key.tres" id="5"]
-[ext_resource type="Resource" path="res://resources/items/coin.tres" id="6"]
-[ext_resource type="PackedScene" path="res://scenes/ui/inventory_ui.tscn" id="7"]
+[ext_resource type="Resource" path="res://resources/items/saucer.tres" id="4"]
+[ext_resource type="Resource" path="res://resources/items/pot.tres" id="5"]
+[ext_resource type="Resource" path="res://resources/items/pan.tres" id="6"]
+[ext_resource type="Resource" path="res://resources/items/jar.tres" id="7"]
+[ext_resource type="Resource" path="res://resources/items/glass.tres" id="8"]
+[ext_resource type="Resource" path="res://resources/items/cup.tres" id="9"]
+[ext_resource type="Resource" path="res://resources/items/book.tres" id="10"]
+[ext_resource type="Resource" path="res://resources/items/candle.tres" id="11"]
+[ext_resource type="PackedScene" path="res://scenes/ui/inventory_ui.tscn" id="12"]
 
 [node name="World" type="Node2D"]
 
@@ -17,28 +22,49 @@ script = ExtResource("1")
 
 [node name="Items" type="Node2D" parent="."]
 
-[node name="Potion" parent="Items" instance=ExtResource("3")]
+[node name="Saucer" parent="Items" instance=ExtResource("3")]
 position = Vector2(32, 0)
 item_data = ExtResource("4")
 quantity = 1
-color = Color(0.85, 0.2, 0.2, 1)
 
-[node name="Key" parent="Items" instance=ExtResource("3")]
+[node name="Pot" parent="Items" instance=ExtResource("3")]
 position = Vector2(-32, 0)
 item_data = ExtResource("5")
 quantity = 1
-color = Color(0.9, 0.85, 0.2, 1)
 
-[node name="Coin" parent="Items" instance=ExtResource("3")]
+[node name="Pan" parent="Items" instance=ExtResource("3")]
 position = Vector2(0, 32)
 item_data = ExtResource("6")
-quantity = 5
-color = Color(0.95, 0.7, 0.1, 1)
+quantity = 1
 
-[node name="Coin2" parent="Items" instance=ExtResource("3")]
+[node name="Jar" parent="Items" instance=ExtResource("3")]
 position = Vector2(16, 32)
-item_data = ExtResource("6")
-quantity = 3
-color = Color(0.95, 0.7, 0.1, 1)
+item_data = ExtResource("7")
+quantity = 1
 
-[node name="InventoryUI" parent="." instance=ExtResource("7")]
+[node name="Glass" parent="Items" instance=ExtResource("3")]
+position = Vector2(48, 0)
+item_data = ExtResource("8")
+quantity = 1
+
+[node name="Cup" parent="Items" instance=ExtResource("3")]
+position = Vector2(-48, 0)
+item_data = ExtResource("9")
+quantity = 1
+
+[node name="Book" parent="Items" instance=ExtResource("3")]
+position = Vector2(0, 48)
+item_data = ExtResource("10")
+quantity = 1
+
+[node name="Candle" parent="Items" instance=ExtResource("3")]
+position = Vector2(16, 48)
+item_data = ExtResource("11")
+quantity = 1
+
+[node name="Candle2" parent="Items" instance=ExtResource("3")]
+position = Vector2(32, 48)
+item_data = ExtResource("11")
+quantity = 2
+
+[node name="InventoryUI" parent="." instance=ExtResource("12")]

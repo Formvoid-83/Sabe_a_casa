@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scripts/items/item_data.gd" id="1"]
+[ext_resource type="Texture2D" path="res://sprites/TopDownHouse_SmallItems.png" id="2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1"]
+atlas = ExtResource("2")
+region = Rect2(64, 80, 16, 16)
+
+[resource]
+script = ExtResource("1")
+id = "pan"
+display_name = "Pan"
+max_stack = 10
+icon = SubResource("AtlasTexture_1")
