@@ -1,7 +1,7 @@
 extends Node2D
 
-const TILE_SIZE := 32
-const GRID_EXTENT := 12 # tiles drawn in each direction from the origin
+const TILE_SIZE := 16
+const GRID_EXTENT := 20 # tiles drawn in each direction from the origin
 
 func _ready() -> void:
 	queue_redraw()

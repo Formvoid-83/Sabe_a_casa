@@ -19,4 +19,4 @@ func _on_body_entered(body: Node2D) -> void:
 	queue_free()
 
 func _draw() -> void:
-	draw_circle(Vector2.ZERO, 10.0, color)
+	draw_circle(Vector2.ZERO, 6.0, color)
