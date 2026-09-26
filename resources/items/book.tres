@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://bpntepbkcrwp2"]
-=======
-[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://bnpkhb3g7ay8"]
->>>>>>> feature/tiles
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://dppqwhaccp2bo"]
 
 [ext_resource type="Script" uid="uid://bp0qw6cgch5js" path="res://scripts/items/item_data.gd" id="1"]
 [ext_resource type="Texture2D" uid="uid://b15ibdv8av54m" path="res://sprites/TopDownHouse_SmallItems.png" id="2"]
