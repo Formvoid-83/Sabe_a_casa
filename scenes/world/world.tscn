@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=3]
 
-[ext_resource type="Script" path="res://scripts/world/grid_visual.gd" id="1"]
+[ext_resource type="Script" path="res://scripts/world/living_room.gd" id="1"]
 [ext_resource type="PackedScene" path="res://scenes/player/player.tscn" id="2"]
 [ext_resource type="PackedScene" path="res://scenes/items/item.tscn" id="3"]
 [ext_resource type="Resource" path="res://resources/items/saucer.tres" id="4"]
@@ -15,55 +15,56 @@
 
 [node name="World" type="Node2D"]
 
-[node name="GridVisual" type="Node2D" parent="."]
+[node name="LivingRoom" type="Node2D" parent="."]
 script = ExtResource("1")
 
 [node name="Player" parent="." instance=ExtResource("2")]
+position = Vector2(112, 48)
 
 [node name="Items" type="Node2D" parent="."]
 
 [node name="Saucer" parent="Items" instance=ExtResource("3")]
-position = Vector2(32, 0)
+position = Vector2(48, 64)
 item_data = ExtResource("4")
 quantity = 1
 
 [node name="Pot" parent="Items" instance=ExtResource("3")]
-position = Vector2(-32, 0)
+position = Vector2(32, 128)
 item_data = ExtResource("5")
 quantity = 1
 
 [node name="Pan" parent="Items" instance=ExtResource("3")]
-position = Vector2(0, 32)
+position = Vector2(16, 112)
 item_data = ExtResource("6")
 quantity = 1
 
 [node name="Jar" parent="Items" instance=ExtResource("3")]
-position = Vector2(16, 32)
+position = Vector2(128, 64)
 item_data = ExtResource("7")
 quantity = 1
 
 [node name="Glass" parent="Items" instance=ExtResource("3")]
-position = Vector2(48, 0)
+position = Vector2(144, 80)
 item_data = ExtResource("8")
 quantity = 1
 
 [node name="Cup" parent="Items" instance=ExtResource("3")]
-position = Vector2(-48, 0)
+position = Vector2(176, 96)
 item_data = ExtResource("9")
 quantity = 1
 
 [node name="Book" parent="Items" instance=ExtResource("3")]
-position = Vector2(0, 48)
+position = Vector2(48, 144)
 item_data = ExtResource("10")
 quantity = 1
 
 [node name="Candle" parent="Items" instance=ExtResource("3")]
-position = Vector2(16, 48)
+position = Vector2(32, 160)
 item_data = ExtResource("11")
 quantity = 1
 
 [node name="Candle2" parent="Items" instance=ExtResource("3")]
-position = Vector2(32, 48)
+position = Vector2(48, 160)
 item_data = ExtResource("11")
 quantity = 2
 
