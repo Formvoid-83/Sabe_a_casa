@@ -7,6 +7,7 @@ func _ready() -> void:
 	queue_redraw()
 
 func _draw() -> void:
+	Bubbles.say("Bienvenide pute" , 3)
 	var half := GRID_EXTENT * TILE_SIZE
 	var color := Color(1, 1, 1, 0.12)
 	var x := -half
