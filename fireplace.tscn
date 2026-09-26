@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://ct1c6nlj0xnlt"]
+
+[ext_resource type="Texture2D" uid="uid://bdccqc6y2new5" path="res://sprites/TopDownHouse_FurnitureState1.png" id="1_0dsgr"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fph3v"]
+atlas = ExtResource("1_0dsgr")
+region = Rect2(22.893608, 166.22528, 51.207764, 26.19606)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3u6sw"]
+size = Vector2(49, 25)
+
+[node name="Sofa" type="StaticBody2D" unique_id=955958918]
+collision_mask = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1752056478]
+texture = SubResource("AtlasTexture_fph3v")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=471136646]
+position = Vector2(25.5, 13.5)
+shape = SubResource("RectangleShape2D_3u6sw")

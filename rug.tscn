@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://ccad153orfwqp"]
+
+[ext_resource type="Texture2D" uid="uid://bdccqc6y2new5" path="res://sprites/TopDownHouse_FurnitureState1.png" id="1_p1ovl"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u25on"]
+atlas = ExtResource("1_p1ovl")
+region = Rect2(160, 32, 48, 32)
+
+[node name="Rug" type="Node2D" unique_id=1654191556]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1891934906]
+texture = SubResource("AtlasTexture_u25on")
+centered = false
