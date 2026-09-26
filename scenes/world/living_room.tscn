@@ -1,0 +1,95 @@
+[gd_scene format=4 uid="uid://bt80ss6myu8p0"]
+
+[ext_resource type="TileSet" uid="uid://nym6yjbn8x81" path="res://resources/tiles/house_tileset.tres" id="1_1nr52"]
+[ext_resource type="PackedScene" path="res://scenes/furniture/rug.tscn" id="2_hudjg"]
+[ext_resource type="PackedScene" uid="uid://bncph7rde0qcy" path="res://scenes/furniture/fireplace.tscn" id="3_j07wj"]
+[ext_resource type="PackedScene" uid="uid://ddaq0r13kl2gw" path="res://scenes/furniture/bookshelf.tscn" id="4_y7muy"]
+[ext_resource type="PackedScene" uid="uid://67gq678ojmon" path="res://scenes/furniture/coffee_table.tscn" id="5_eac5k"]
+[ext_resource type="PackedScene" uid="uid://duh84evl0f630" path="res://scenes/furniture/armchair.tscn" id="6_2cnlk"]
+[ext_resource type="PackedScene" path="res://scenes/furniture/floor_lamp.tscn" id="7_tnwr3"]
+[ext_resource type="PackedScene" uid="uid://6qgr88d56a0o" path="res://scenes/furniture/sofa.tscn" id="8_2kvid"]
+[ext_resource type="PackedScene" uid="uid://cljd1suxtqu7l" path="res://scenes/furniture/plant.tscn" id="9_yi5hv"]
+[ext_resource type="PackedScene" path="res://scenes/items/item.tscn" id="10_06ll2"]
+[ext_resource type="Resource" uid="uid://xcj0hc3osisl" path="res://resources/items/saucer.tres" id="11_wblbh"]
+[ext_resource type="Resource" uid="uid://dm26g5caoe74e" path="res://resources/items/pot.tres" id="12_uh81s"]
+[ext_resource type="Resource" uid="uid://07bss0meftxx" path="res://resources/items/pan.tres" id="13_fmf3r"]
+[ext_resource type="Resource" uid="uid://c12u6ifpouv5d" path="res://resources/items/jar.tres" id="14_b4w1u"]
+[ext_resource type="Resource" uid="uid://dkepnklcs45ne" path="res://resources/items/glass.tres" id="15_63lv3"]
+[ext_resource type="Resource" uid="uid://ck3jerb77ce3y" path="res://resources/items/cup.tres" id="16_dlasf"]
+[ext_resource type="Resource" uid="uid://bnpkhb3g7ay8" path="res://resources/items/book.tres" id="17_qllja"]
+[ext_resource type="Resource" uid="uid://cte0dqwub3lyf" path="res://resources/items/candle.tres" id="18_albvo"]
+
+[node name="LivingRoom" type="Node2D" unique_id=841488708]
+
+[node name="Floor" type="TileMapLayer" parent="." unique_id=944783052]
+tile_map_data = PackedByteArray("AAABAAMAAAAKAAYAAAACAAMAAAAKAAYAAAADAAMAAAAKAAYAAAAEAAMAAAAKAAYAAAAFAAMAAAAKAAYAAAAGAAMAAAAKAAYAAAAHAAMAAAAKAAYAAAAIAAMAAAAKAAYAAAAJAAMAAAAKAAYAAAAKAAMAAAAKAAYAAAALAAMAAAAKAAYAAAAMAAMAAAAKAAYAAAABAAQAAAAKAAYAAAACAAQAAAAKAAYAAAADAAQAAAAKAAYAAAAEAAQAAAAKAAYAAAAFAAQAAAAKAAYAAAAGAAQAAAAKAAYAAAAHAAQAAAAKAAYAAAAIAAQAAAAKAAYAAAAJAAQAAAAKAAYAAAAKAAQAAAAKAAYAAAALAAQAAAAKAAYAAAAMAAQAAAAKAAYAAAABAAUAAAAKAAYAAAACAAUAAAAKAAYAAAADAAUAAAAKAAYAAAAEAAUAAAAKAAYAAAAFAAUAAAAKAAYAAAAGAAUAAAAKAAYAAAAHAAUAAAAKAAYAAAAIAAUAAAAKAAYAAAAJAAUAAAAKAAYAAAAKAAUAAAAKAAYAAAALAAUAAAAKAAYAAAAMAAUAAAAKAAYAAAABAAYAAAAKAAYAAAACAAYAAAAKAAYAAAADAAYAAAAKAAYAAAAEAAYAAAAKAAYAAAAFAAYAAAAKAAYAAAAGAAYAAAAKAAYAAAAHAAYAAAAKAAYAAAAIAAYAAAAKAAYAAAAJAAYAAAAKAAYAAAAKAAYAAAAKAAYAAAALAAYAAAAKAAYAAAAMAAYAAAAKAAYAAAABAAcAAAAKAAYAAAACAAcAAAAKAAYAAAADAAcAAAAKAAYAAAAEAAcAAAAKAAYAAAAFAAcAAAAKAAYAAAAGAAcAAAAKAAYAAAAHAAcAAAAKAAYAAAAIAAcAAAAKAAYAAAAJAAcAAAAKAAYAAAAKAAcAAAAKAAYAAAALAAcAAAAKAAYAAAAMAAcAAAAKAAYAAAABAAgAAAAKAAYAAAACAAgAAAAKAAYAAAADAAgAAAAKAAYAAAAEAAgAAAAKAAYAAAAFAAgAAAAKAAYAAAAGAAgAAAAKAAYAAAAHAAgAAAAKAAYAAAAIAAgAAAAKAAYAAAAJAAgAAAAKAAYAAAAKAAgAAAAKAAYAAAALAAgAAAAKAAYAAAAMAAgAAAAKAAYAAAABAAkAAAAKAAYAAAACAAkAAAAKAAYAAAADAAkAAAAKAAYAAAAEAAkAAAAKAAYAAAAFAAkAAAAKAAYAAAAGAAkAAAAKAAYAAAAHAAkAAAAKAAYAAAAIAAkAAAAKAAYAAAAJAAkAAAAKAAYAAAAKAAkAAAAKAAYAAAALAAkAAAAKAAYAAAAMAAkAAAAKAAYAAAABAAoAAAAKAAYAAAACAAoAAAAKAAYAAAADAAoAAAAKAAYAAAAEAAoAAAAKAAYAAAAFAAoAAAAKAAYAAAAGAAoAAAAKAAYAAAAHAAoAAAAKAAYAAAAIAAoAAAAKAAYAAAAJAAoAAAAKAAYAAAAKAAoAAAAKAAYAAAALAAoAAAAKAAYAAAAMAAoAAAAKAAYAAAA=")
+tile_set = ExtResource("1_1nr52")
+
+[node name="Walls" type="TileMapLayer" parent="." unique_id=185377188]
+tile_map_data = PackedByteArray("AAAAAAAAAAAJAAEAAAAAAAEAAAAJAAEAAAAAAAIAAAAJAAQAAAABAAAAAAAJAAEAAAABAAEAAAAJAAEAAAABAAIAAAAJAAQAAAACAAAAAAAJAAEAAAACAAEAAQAMAAgAAAACAAIAAQAMAAkAAAADAAAAAAAJAAEAAAADAAEAAQANAAgAAAADAAIAAQANAAkAAAAEAAAAAAAJAAEAAAAEAAEAAAAJAAEAAAAEAAIAAAAJAAQAAAAFAAAAAAAJAAEAAAAFAAEAAAAJAAEAAAAFAAIAAAAJAAQAAAAGAAAAAQAMAAUAAAAGAAEAAQAMAAYAAAAGAAIAAQAMAAcAAAAHAAAAAQANAAUAAAAHAAEAAQANAAYAAAAHAAIAAQANAAcAAAAIAAAAAAAJAAEAAAAIAAEAAAAJAAEAAAAIAAIAAAAJAAQAAAAJAAAAAAAJAAEAAAAJAAEAAAAJAAEAAAAJAAIAAAAJAAQAAAAKAAAAAAAJAAEAAAAKAAEAAAAJAAEAAAAKAAIAAAAJAAQAAAALAAAAAAAJAAEAAAALAAEAAAAJAAEAAAALAAIAAAAJAAQAAAAMAAAAAAAJAAEAAAAMAAEAAAAJAAEAAAAMAAIAAAAJAAQAAAANAAAAAAAJAAEAAAANAAEAAAAJAAEAAAANAAIAAAAJAAQAAAAAAAMAAAAJAAQAAAANAAMAAAAJAAQAAAAAAAQAAAAJAAQAAAANAAQAAAAJAAQAAAAAAAUAAAAJAAQAAAANAAUAAAAJAAQAAAAAAAYAAAAJAAQAAAANAAYAAAAJAAQAAAAAAAcAAAAJAAQAAAANAAcAAAAJAAQAAAAAAAgAAAAJAAQAAAANAAgAAAAJAAQAAAAAAAkAAAAJAAQAAAANAAkAAAAJAAQAAAAAAAoAAAAJAAQAAAANAAoAAAAJAAQAAAAAAAsAAAAJAAQAAAANAAsAAAAJAAQAAAABAAsAAAAJAAQAAAACAAsAAAAJAAQAAAADAAsAAAAJAAQAAAAEAAsAAAAJAAQAAAAFAAsAAAAJAAQAAAAGAAsAAAAJAAQAAAAHAAsAAAAJAAQAAAAIAAsAAAAJAAQAAAAJAAsAAAAJAAQAAAAKAAsAAAAJAAQAAAALAAsAAAAJAAQAAAAMAAsAAAAJAAQAAAA=")
+tile_set = ExtResource("1_1nr52")
+
+[node name="Furniture" type="Node2D" parent="." unique_id=36341180]
+
+[node name="Rug" parent="Furniture" unique_id=1654191556 instance=ExtResource("2_hudjg")]
+position = Vector2(64, 96)
+
+[node name="Fireplace" parent="Furniture" unique_id=1075705021 instance=ExtResource("3_j07wj")]
+position = Vector2(12, 28)
+
+[node name="Bookshelf" parent="Furniture" unique_id=408045153 instance=ExtResource("4_y7muy")]
+position = Vector2(162, 22)
+
+[node name="CoffeeTable" parent="Furniture" unique_id=1503652853 instance=ExtResource("5_eac5k")]
+position = Vector2(97, 97)
+
+[node name="Armchair" parent="Furniture" unique_id=1108989282 instance=ExtResource("6_2cnlk")]
+position = Vector2(63, 98)
+
+[node name="FloorLamp" parent="Furniture" unique_id=1511546806 instance=ExtResource("7_tnwr3")]
+position = Vector2(162, 122)
+
+[node name="Sofa" parent="Furniture" unique_id=955958918 instance=ExtResource("8_2kvid")]
+position = Vector2(88, 145)
+
+[node name="Plant" parent="Furniture" unique_id=472728234 instance=ExtResource("9_yi5hv")]
+position = Vector2(192, 144)
+
+[node name="Items" type="Node2D" parent="." unique_id=1947372736]
+
+[node name="Saucer" parent="Items" unique_id=827831093 instance=ExtResource("10_06ll2")]
+position = Vector2(56, 72)
+item_data = ExtResource("11_wblbh")
+
+[node name="Pot" parent="Items" unique_id=360326297 instance=ExtResource("10_06ll2")]
+position = Vector2(40, 136)
+item_data = ExtResource("12_uh81s")
+
+[node name="Pan" parent="Items" unique_id=927794264 instance=ExtResource("10_06ll2")]
+position = Vector2(24, 120)
+item_data = ExtResource("13_fmf3r")
+
+[node name="Jar" parent="Items" unique_id=1920341304 instance=ExtResource("10_06ll2")]
+position = Vector2(136, 72)
+item_data = ExtResource("14_b4w1u")
+
+[node name="Glass" parent="Items" unique_id=1819876794 instance=ExtResource("10_06ll2")]
+position = Vector2(152, 88)
+item_data = ExtResource("15_63lv3")
+
+[node name="Cup" parent="Items" unique_id=276127906 instance=ExtResource("10_06ll2")]
+position = Vector2(184, 104)
+item_data = ExtResource("16_dlasf")
+
+[node name="Book" parent="Items" unique_id=556137559 instance=ExtResource("10_06ll2")]
+position = Vector2(56, 152)
+item_data = ExtResource("17_qllja")
+
+[node name="Candle" parent="Items" unique_id=1895610864 instance=ExtResource("10_06ll2")]
+position = Vector2(40, 168)
+item_data = ExtResource("18_albvo")
+
+[node name="Candle2" parent="Items" unique_id=667248354 instance=ExtResource("10_06ll2")]
+position = Vector2(56, 168)
+item_data = ExtResource("18_albvo")
+quantity = 2

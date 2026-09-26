@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [gd_scene load_steps=13 format=3 uid="uid://fyaw8uioacv4"]
 
 [ext_resource type="Script" uid="uid://k34uxb7ry6tr" path="res://scripts/world/grid_visual.gd" id="1"]
@@ -11,15 +12,23 @@
 [ext_resource type="Resource" uid="uid://bklwo3c010kuh" path="res://resources/items/cup.tres" id="9"]
 [ext_resource type="Resource" uid="uid://bpntepbkcrwp2" path="res://resources/items/book.tres" id="10"]
 [ext_resource type="Resource" uid="uid://d4nr2gx33iq2j" path="res://resources/items/candle.tres" id="11"]
+=======
+[gd_scene format=3 uid="uid://fyaw8uioacv4"]
+
+[ext_resource type="PackedScene" path="res://scenes/world/living_room.tscn" id="1_dlabj"]
+[ext_resource type="PackedScene" path="res://scenes/player/player.tscn" id="2"]
+>>>>>>> feature/tiles
 [ext_resource type="PackedScene" path="res://scenes/ui/inventory_ui.tscn" id="12"]
 
-[node name="World" type="Node2D"]
+[node name="World" type="Node2D" unique_id=291971835]
 
-[node name="GridVisual" type="Node2D" parent="."]
-script = ExtResource("1")
+[node name="LivingRoom" parent="." unique_id=841488708 instance=ExtResource("1_dlabj")]
+position = Vector2(13, -2)
 
-[node name="Player" parent="." instance=ExtResource("2")]
+[node name="Player" parent="." unique_id=2074919889 instance=ExtResource("2")]
+position = Vector2(120, 56)
 
+<<<<<<< HEAD
 [node name="Items" type="Node2D" parent="."]
 
 [node name="Saucer" parent="Items" instance=ExtResource("3")]
@@ -60,3 +69,6 @@ item_data = ExtResource("11")
 quantity = 2
 
 [node name="InventoryUI" parent="." instance=ExtResource("12")]
+=======
+[node name="InventoryUI" parent="." unique_id=864470756 instance=ExtResource("12")]
+>>>>>>> feature/tiles

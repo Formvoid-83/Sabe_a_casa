@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://bncph7rde0qcy"]
+
+[ext_resource type="Texture2D" uid="uid://bdccqc6y2new5" path="res://sprites/TopDownHouse_FurnitureState1.png" id="1_o8baa"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6ite0"]
+atlas = ExtResource("1_o8baa")
+region = Rect2(144, 112.08438, 32, 40.869003)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qvlfg"]
+size = Vector2(24, 41)
+
+[node name="Fireplace" type="StaticBody2D" unique_id=1075705021]
+collision_mask = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1055086396]
+texture = SubResource("AtlasTexture_6ite0")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=796176817]
+position = Vector2(16, 20.5)
+shape = SubResource("RectangleShape2D_qvlfg")
