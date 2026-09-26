@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://duh84evl0f630"]
+
+[ext_resource type="Texture2D" uid="uid://bdccqc6y2new5" path="res://sprites/TopDownHouse_FurnitureState1.png" id="1_g4xyi"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jyurj"]
+atlas = ExtResource("1_g4xyi")
+region = Rect2(172.75577, 117.1251, 32, 35.22776)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tx478"]
+size = Vector2(23, 37)
+
+[node name="Armchair" type="StaticBody2D" unique_id=1108989282]
+collision_mask = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1744681123]
+texture = SubResource("AtlasTexture_jyurj")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1527225548]
+position = Vector2(15, 17.5)
+shape = SubResource("RectangleShape2D_tx478")

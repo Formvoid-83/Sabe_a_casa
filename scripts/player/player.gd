@@ -4,14 +4,6 @@ class_name Player
 const TILE_SIZE := 16
 const WORLD_LAYER_MASK := 1 # collision_mask bit for the "World"/obstacles layer
 
-const SPRITE_SHEET := preload("res://sprites/AnimationSheet.png")
-const FRAME_SIZE := 24
-const SHEET_COLUMNS := 8
-# AnimationSheet.png only has a front-facing pose (no back/side view), so
-# left/right reuse the same frames mirrored via flip_h, and up reuses down.
-const IDLE_FRAMES := [0, 1]
-const WALK_FRAMES := [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 40, 41]
-
 @export var tiles_per_second: float = 6.0
 
 @onready var _sprite: AnimatedSprite2D = $AnimatedSprite2D
@@ -23,7 +15,6 @@ var _facing_left := false
 func _ready() -> void:
 	add_to_group("player")
 	_target_position = global_position
-	_sprite.sprite_frames = _build_sprite_frames()
 	_sprite.play("idle")
 
 func _physics_process(delta: float) -> void:
@@ -72,22 +63,3 @@ func _advance_towards_target(delta: float) -> void:
 	if global_position.distance_to(_target_position) < 0.5:
 		global_position = _target_position
 		_is_moving = false
-
-func _build_sprite_frames() -> SpriteFrames:
-	var frames := SpriteFrames.new()
-	frames.remove_animation("default")
-	_add_animation(frames, "idle", IDLE_FRAMES, 3.0)
-	_add_animation(frames, "walk", WALK_FRAMES, 12.0)
-	return frames
-
-func _add_animation(frames: SpriteFrames, anim_name: String, indices: Array, fps: float) -> void:
-	frames.add_animation(anim_name)
-	frames.set_animation_speed(anim_name, fps)
-	frames.set_animation_loop(anim_name, true)
-	for index: int in indices:
-		var col: int = index % SHEET_COLUMNS
-		var row: int = index / SHEET_COLUMNS
-		var atlas := AtlasTexture.new()
-		atlas.atlas = SPRITE_SHEET
-		atlas.region = Rect2(col * FRAME_SIZE, row * FRAME_SIZE, FRAME_SIZE, FRAME_SIZE)
-		frames.add_frame(anim_name, atlas)

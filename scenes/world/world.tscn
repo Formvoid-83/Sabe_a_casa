@@ -1,71 +1,15 @@
-[gd_scene load_steps=13 format=3]
+[gd_scene format=3 uid="uid://fyaw8uioacv4"]
 
-[ext_resource type="Script" path="res://scripts/world/living_room.gd" id="1"]
+[ext_resource type="PackedScene" path="res://scenes/world/living_room.tscn" id="1_dlabj"]
 [ext_resource type="PackedScene" path="res://scenes/player/player.tscn" id="2"]
-[ext_resource type="PackedScene" path="res://scenes/items/item.tscn" id="3"]
-[ext_resource type="Resource" path="res://resources/items/saucer.tres" id="4"]
-[ext_resource type="Resource" path="res://resources/items/pot.tres" id="5"]
-[ext_resource type="Resource" path="res://resources/items/pan.tres" id="6"]
-[ext_resource type="Resource" path="res://resources/items/jar.tres" id="7"]
-[ext_resource type="Resource" path="res://resources/items/glass.tres" id="8"]
-[ext_resource type="Resource" path="res://resources/items/cup.tres" id="9"]
-[ext_resource type="Resource" path="res://resources/items/book.tres" id="10"]
-[ext_resource type="Resource" path="res://resources/items/candle.tres" id="11"]
 [ext_resource type="PackedScene" path="res://scenes/ui/inventory_ui.tscn" id="12"]
 
-[node name="World" type="Node2D"]
+[node name="World" type="Node2D" unique_id=291971835]
 
-[node name="LivingRoom" type="Node2D" parent="."]
-script = ExtResource("1")
+[node name="LivingRoom" parent="." unique_id=841488708 instance=ExtResource("1_dlabj")]
+position = Vector2(13, -2)
 
-[node name="Player" parent="." instance=ExtResource("2")]
-position = Vector2(112, 48)
+[node name="Player" parent="." unique_id=2074919889 instance=ExtResource("2")]
+position = Vector2(120, 56)
 
-[node name="Items" type="Node2D" parent="."]
-
-[node name="Saucer" parent="Items" instance=ExtResource("3")]
-position = Vector2(48, 64)
-item_data = ExtResource("4")
-quantity = 1
-
-[node name="Pot" parent="Items" instance=ExtResource("3")]
-position = Vector2(32, 128)
-item_data = ExtResource("5")
-quantity = 1
-
-[node name="Pan" parent="Items" instance=ExtResource("3")]
-position = Vector2(16, 112)
-item_data = ExtResource("6")
-quantity = 1
-
-[node name="Jar" parent="Items" instance=ExtResource("3")]
-position = Vector2(128, 64)
-item_data = ExtResource("7")
-quantity = 1
-
-[node name="Glass" parent="Items" instance=ExtResource("3")]
-position = Vector2(144, 80)
-item_data = ExtResource("8")
-quantity = 1
-
-[node name="Cup" parent="Items" instance=ExtResource("3")]
-position = Vector2(176, 96)
-item_data = ExtResource("9")
-quantity = 1
-
-[node name="Book" parent="Items" instance=ExtResource("3")]
-position = Vector2(48, 144)
-item_data = ExtResource("10")
-quantity = 1
-
-[node name="Candle" parent="Items" instance=ExtResource("3")]
-position = Vector2(32, 160)
-item_data = ExtResource("11")
-quantity = 1
-
-[node name="Candle2" parent="Items" instance=ExtResource("3")]
-position = Vector2(48, 160)
-item_data = ExtResource("11")
-quantity = 2
-
-[node name="InventoryUI" parent="." instance=ExtResource("12")]
+[node name="InventoryUI" parent="." unique_id=864470756 instance=ExtResource("12")]
