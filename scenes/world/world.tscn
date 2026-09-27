@@ -9,12 +9,13 @@
 [node name="World" type="Node2D" unique_id=291971835 node_paths=PackedStringArray("start_room")]
 script = ExtResource("1_6m72w")
 start_room = NodePath("LivingRoom")
+start_spawn = "Start"
 
 [node name="LivingRoom" parent="." unique_id=841488708 instance=ExtResource("1_dlabj")]
 position = Vector2(18, 0)
 
 [node name="Player" parent="." unique_id=2074919889 instance=ExtResource("2")]
-position = Vector2(-192, 56)
+position = Vector2(138, 56)
 
 [node name="InventoryUI" parent="." unique_id=864470756 instance=ExtResource("12")]
 visible = false
