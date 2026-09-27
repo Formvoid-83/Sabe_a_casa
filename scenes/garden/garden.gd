@@ -12,13 +12,18 @@ const WORLD_LAYER := 1 # physics layer "World" — what the player's movement ch
 
 func _ready() -> void:
 	_build_boundaries()
-
+	
 	var spawner := ItemSpawner.new()
 	spawner.name = "ItemSpawner"
 	spawner.item_pool = garden_items
 	spawner.spawn_count = item_count
 	spawner.spawn_area = spawn_area
 	add_child(spawner)
+	Bubbles.say("cilantro... que?, pere... que?" , 3 )
+	# Wait until the first bubble has fully closed, then show the next one.
+	await Bubbles.closed
+	Bubbles.say("cual sera cual????? :(", 3)
+
 
 # Surrounds the painted area of every TileMapLayer with solid cells, so the
 # player can't step onto any cell that has no tile in any layer.
