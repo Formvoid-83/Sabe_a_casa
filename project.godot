@@ -23,6 +23,7 @@ config/icon="res://icon.svg"
 
 Inventory="*res://scripts/globals/inventory.gd"
 Bubbles="*res://scripts/globals/bubbles.gd"
+RoomManager="*res://scripts/globals/room_manager.gd"
 
 [display]
 
@@ -33,6 +34,7 @@ window/stretch/aspect="expand"
 
 2d_physics/layer_1="World"
 2d_physics/layer_2="Player"
+2d_physics/layer_3="Triggers"
 
 [physics]
 

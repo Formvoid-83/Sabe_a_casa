@@ -1,18 +1,19 @@
 [gd_scene format=3 uid="uid://fyaw8uioacv4"]
 
 [ext_resource type="Script" uid="uid://gk8h5g0hqjuu" path="res://scenes/world/world.gd" id="1_6m72w"]
-[ext_resource type="PackedScene" uid="uid://bt80ss6myu8p0" path="res://scenes/world/living_room.tscn" id="1_dlabj"]
+[ext_resource type="PackedScene" uid="uid://blfp5veaxxir2" path="res://scenes/world/living_room.tscn" id="1_dlabj"]
 [ext_resource type="PackedScene" uid="uid://dmugy8822a65p" path="res://scenes/player/player.tscn" id="2"]
 [ext_resource type="PackedScene" path="res://scenes/ui/inventory_ui.tscn" id="12"]
 
-[node name="World" type="Node2D" unique_id=291971835]
+[node name="World" type="Node2D" unique_id=291971835 node_paths=PackedStringArray("start_room")]
 script = ExtResource("1_6m72w")
+start_room = NodePath("LivingRoom")
 
 [node name="LivingRoom" parent="." unique_id=841488708 instance=ExtResource("1_dlabj")]
-position = Vector2(13, -2)
+position = Vector2(-273, -27)
 
 [node name="Player" parent="." unique_id=2074919889 instance=ExtResource("2")]
-position = Vector2(107, 55)
+position = Vector2(-192, 56)
 
 [node name="InventoryUI" parent="." unique_id=864470756 instance=ExtResource("12")]
 visible = false

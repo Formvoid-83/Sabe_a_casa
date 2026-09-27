@@ -1,12 +1,14 @@
 [gd_resource type="TileSet" format=3 uid="uid://nym6yjbn8x81"]
 
-[ext_resource type="Texture2D" uid="uid://b2yop33exvudr" path="res://sprites/TopDownHouse_FloorsAndWalls.png" id="1_lvwug"]
 [ext_resource type="Texture2D" uid="uid://f6ee7ddtwj3s" path="res://sprites/TopDownHouse_DoorsAndWindows.png" id="2_3t7gj"]
 [ext_resource type="Texture2D" uid="uid://bwe6g3ltiobf6" path="res://sprites/TopDownHouse_FloorsAndWalls_OpenDoors.png" id="3_74jpg"]
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_kupbh"]
+load_path = "res://.godot/imported/TopDownHouse_FloorsAndWalls.png-7253673ad8f52cf1600de1e6fe0a924b.ctex"
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qmabx"]
 resource_name = "FloorsAndWalls"
-texture = ExtResource("1_lvwug")
+texture = SubResource("CompressedTexture2D_kupbh")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0

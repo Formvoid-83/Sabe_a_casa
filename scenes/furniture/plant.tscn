@@ -4,10 +4,10 @@
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_psdle"]
 atlas = ExtResource("1_wiqgl")
-region = Rect2(0, 160, 16, 32)
+region = Rect2(2.5487843, 167.82037, 10.558664, 24.179626)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rhx8w"]
-size = Vector2(13, 25)
+size = Vector2(10, 12)
 
 [node name="Plant" type="StaticBody2D" unique_id=472728234]
 collision_mask = 0
@@ -17,5 +17,5 @@ texture = SubResource("AtlasTexture_psdle")
 centered = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1499755261]
-position = Vector2(8.5, 19.5)
+position = Vector2(5, 18)
 shape = SubResource("RectangleShape2D_rhx8w")

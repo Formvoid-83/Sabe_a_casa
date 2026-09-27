@@ -1,4 +1,4 @@
-[gd_scene format=4 uid="uid://bt80ss6myu8p0"]
+[gd_scene format=4 uid="uid://blfp5veaxxir2"]
 
 [ext_resource type="TileSet" uid="uid://nym6yjbn8x81" path="res://resources/tiles/house_tileset.tres" id="1_1nr52"]
 [ext_resource type="PackedScene" path="res://scenes/furniture/rug.tscn" id="2_hudjg"]
@@ -10,19 +10,20 @@
 [ext_resource type="PackedScene" uid="uid://6qgr88d56a0o" path="res://scenes/furniture/sofa.tscn" id="8_2kvid"]
 [ext_resource type="PackedScene" uid="uid://cljd1suxtqu7l" path="res://scenes/furniture/plant.tscn" id="9_yi5hv"]
 [ext_resource type="PackedScene" path="res://scenes/items/item.tscn" id="10_06ll2"]
-[ext_resource type="Resource" uid="uid://xcj0hc3osisl" path="res://resources/items/saucer.tres" id="11_wblbh"]
-[ext_resource type="Resource" uid="uid://dm26g5caoe74e" path="res://resources/items/pot.tres" id="12_uh81s"]
-[ext_resource type="Resource" uid="uid://07bss0meftxx" path="res://resources/items/pan.tres" id="13_fmf3r"]
-[ext_resource type="Resource" uid="uid://c12u6ifpouv5d" path="res://resources/items/jar.tres" id="14_b4w1u"]
-[ext_resource type="Resource" uid="uid://dkepnklcs45ne" path="res://resources/items/glass.tres" id="15_63lv3"]
-[ext_resource type="Resource" uid="uid://ck3jerb77ce3y" path="res://resources/items/cup.tres" id="16_dlasf"]
-[ext_resource type="Resource" uid="uid://bnpkhb3g7ay8" path="res://resources/items/book.tres" id="17_qllja"]
-[ext_resource type="Resource" uid="uid://cte0dqwub3lyf" path="res://resources/items/candle.tres" id="18_albvo"]
+[ext_resource type="Resource" uid="uid://dvriovpwc3owa" path="res://resources/items/saucer.tres" id="11_wblbh"]
+[ext_resource type="Resource" uid="uid://cch5tjrk1k07f" path="res://resources/items/pot.tres" id="12_uh81s"]
+[ext_resource type="Resource" uid="uid://co5nxxfgo5idn" path="res://resources/items/pan.tres" id="13_fmf3r"]
+[ext_resource type="Resource" uid="uid://d6ptmoqu7c8o" path="res://resources/items/jar.tres" id="14_b4w1u"]
+[ext_resource type="Resource" uid="uid://d47ao08mw5h1" path="res://resources/items/glass.tres" id="15_63lv3"]
+[ext_resource type="Resource" uid="uid://brxgysrv2xjk2" path="res://resources/items/cup.tres" id="16_dlasf"]
+[ext_resource type="Resource" uid="uid://dppqwhaccp2bo" path="res://resources/items/book.tres" id="17_qllja"]
+[ext_resource type="Resource" uid="uid://dyhil6mdkktnj" path="res://resources/items/candle.tres" id="18_albvo"]
+[ext_resource type="PackedScene" path="res://scenes/furniture/stairs.tscn" id="19_wblbh"]
 
 [node name="LivingRoom" type="Node2D" unique_id=841488708]
 
 [node name="Floor" type="TileMapLayer" parent="." unique_id=944783052]
-tile_map_data = PackedByteArray("AAABAAMAAAAKAAYAAAACAAMAAAAKAAYAAAADAAMAAAAKAAYAAAAEAAMAAAAKAAYAAAAFAAMAAAAKAAYAAAAGAAMAAAAKAAYAAAAHAAMAAAAKAAYAAAAIAAMAAAAKAAYAAAAJAAMAAAAKAAYAAAAKAAMAAAAKAAYAAAALAAMAAAAKAAYAAAAMAAMAAAAKAAYAAAABAAQAAAAKAAYAAAACAAQAAAAKAAYAAAADAAQAAAAKAAYAAAAEAAQAAAAKAAYAAAAFAAQAAAAKAAYAAAAGAAQAAAAKAAYAAAAHAAQAAAAKAAYAAAAIAAQAAAAKAAYAAAAJAAQAAAAKAAYAAAAKAAQAAAAKAAYAAAALAAQAAAAKAAYAAAAMAAQAAAAKAAYAAAABAAUAAAAKAAYAAAACAAUAAAAKAAYAAAADAAUAAAAKAAYAAAAEAAUAAAAKAAYAAAAFAAUAAAAKAAYAAAAGAAUAAAAKAAYAAAAHAAUAAAAKAAYAAAAIAAUAAAAKAAYAAAAJAAUAAAAKAAYAAAAKAAUAAAAKAAYAAAALAAUAAAAKAAYAAAAMAAUAAAAKAAYAAAABAAYAAAAKAAYAAAACAAYAAAAKAAYAAAADAAYAAAAKAAYAAAAEAAYAAAAKAAYAAAAFAAYAAAAKAAYAAAAGAAYAAAAKAAYAAAAHAAYAAAAKAAYAAAAIAAYAAAAKAAYAAAAJAAYAAAAKAAYAAAAKAAYAAAAKAAYAAAALAAYAAAAKAAYAAAAMAAYAAAAKAAYAAAABAAcAAAAKAAYAAAACAAcAAAAKAAYAAAADAAcAAAAKAAYAAAAEAAcAAAAKAAYAAAAFAAcAAAAKAAYAAAAGAAcAAAAKAAYAAAAHAAcAAAAKAAYAAAAIAAcAAAAKAAYAAAAJAAcAAAAKAAYAAAAKAAcAAAAKAAYAAAALAAcAAAAKAAYAAAAMAAcAAAAKAAYAAAABAAgAAAAKAAYAAAACAAgAAAAKAAYAAAADAAgAAAAKAAYAAAAEAAgAAAAKAAYAAAAFAAgAAAAKAAYAAAAGAAgAAAAKAAYAAAAHAAgAAAAKAAYAAAAIAAgAAAAKAAYAAAAJAAgAAAAKAAYAAAAKAAgAAAAKAAYAAAALAAgAAAAKAAYAAAAMAAgAAAAKAAYAAAABAAkAAAAKAAYAAAACAAkAAAAKAAYAAAADAAkAAAAKAAYAAAAEAAkAAAAKAAYAAAAFAAkAAAAKAAYAAAAGAAkAAAAKAAYAAAAHAAkAAAAKAAYAAAAIAAkAAAAKAAYAAAAJAAkAAAAKAAYAAAAKAAkAAAAKAAYAAAALAAkAAAAKAAYAAAAMAAkAAAAKAAYAAAABAAoAAAAKAAYAAAACAAoAAAAKAAYAAAADAAoAAAAKAAYAAAAEAAoAAAAKAAYAAAAFAAoAAAAKAAYAAAAGAAoAAAAKAAYAAAAHAAoAAAAKAAYAAAAIAAoAAAAKAAYAAAAJAAoAAAAKAAYAAAAKAAoAAAAKAAYAAAALAAoAAAAKAAYAAAAMAAoAAAAKAAYAAAA=")
+tile_map_data = PackedByteArray("AAABAAMAAAAKAAYAAAACAAMAAAAKAAYAAAADAAMAAAAKAAYAAAAEAAMAAAAKAAYAAAAFAAMAAAAKAAYAAAAGAAMAAAAKAAYAAAAHAAMAAAAKAAYAAAAIAAMAAAAKAAYAAAAJAAMAAAAKAAYAAAAKAAMAAAAKAAYAAAALAAMAAAAKAAYAAAAMAAMAAAAKAAYAAAABAAQAAAAKAAYAAAACAAQAAAAKAAYAAAADAAQAAAAKAAYAAAAEAAQAAAAKAAYAAAAFAAQAAAAKAAYAAAAGAAQAAAAKAAYAAAAHAAQAAAAKAAYAAAAIAAQAAAAKAAYAAAAJAAQAAAAKAAYAAAAKAAQAAAAKAAYAAAALAAQAAAAKAAYAAAAMAAQAAAAKAAYAAAABAAUAAAAKAAYAAAACAAUAAAAKAAYAAAADAAUAAAAKAAYAAAAEAAUAAAAKAAYAAAAFAAUAAAAKAAYAAAAGAAUAAAAKAAYAAAAHAAUAAAAKAAYAAAAIAAUAAAAKAAYAAAAJAAUAAAAKAAYAAAAKAAUAAAAKAAYAAAALAAUAAAAKAAYAAAAMAAUAAAAKAAYAAAABAAYAAAAKAAYAAAACAAYAAAAKAAYAAAADAAYAAAAKAAYAAAAEAAYAAAAKAAYAAAAFAAYAAAAKAAYAAAAGAAYAAAAKAAYAAAAHAAYAAAAKAAYAAAAIAAYAAAAKAAYAAAAJAAYAAAAKAAYAAAAKAAYAAAAKAAYAAAALAAYAAAAKAAYAAAAMAAYAAAAKAAYAAAABAAcAAAAKAAYAAAACAAcAAAAKAAYAAAADAAcAAAAKAAYAAAAEAAcAAAAKAAYAAAAFAAcAAAAKAAYAAAAGAAcAAAAKAAYAAAAHAAcAAAAKAAYAAAAIAAcAAAAKAAYAAAAJAAcAAAAKAAYAAAAKAAcAAAAKAAYAAAALAAcAAAAKAAYAAAAMAAcAAAAKAAYAAAABAAgAAAAKAAYAAAACAAgAAAAKAAYAAAADAAgAAAAKAAYAAAAEAAgAAAAKAAYAAAAFAAgAAAAKAAYAAAAGAAgAAAAKAAYAAAAHAAgAAAAKAAYAAAAIAAgAAAAKAAYAAAAJAAgAAAAKAAYAAAAKAAgAAAAKAAYAAAALAAgAAAAKAAYAAAAMAAgAAAAKAAYAAAABAAkAAAAKAAYAAAACAAkAAAAKAAYAAAADAAkAAAAKAAYAAAAEAAkAAAAKAAYAAAAFAAkAAAAKAAYAAAAGAAkAAAAKAAYAAAAHAAkAAAAKAAYAAAAIAAkAAAAKAAYAAAAJAAkAAAAKAAYAAAAKAAkAAAAKAAYAAAALAAkAAAAKAAYAAAAMAAkAAAAKAAYAAAABAAoAAAAKAAYAAAACAAoAAAAKAAYAAAADAAoAAAAKAAYAAAAEAAoAAAAKAAYAAAAFAAoAAAAKAAYAAAAGAAoAAAAKAAYAAAAHAAoAAAAKAAYAAAAIAAoAAAAKAAYAAAAJAAoAAAAKAAYAAAAKAAoAAAAKAAYAAAALAAoAAAAKAAYAAAAMAAoAAAAKAAYAAAACAAEAAAANAAEAAAADAAEAAAANAAEAAAADAAIAAAANAAEAAAACAAIAAAANAAEAAAAGAAAAAAABAAEAAAAGAAEAAAABAAIAAAAGAAIAAAABAAMAAAAHAAAAAAACAAEAAAAHAAEAAAACAAIAAAAHAAIAAAACAAMAAAA=")
 tile_set = ExtResource("1_1nr52")
 
 [node name="Walls" type="TileMapLayer" parent="." unique_id=185377188]
@@ -32,41 +33,42 @@ tile_set = ExtResource("1_1nr52")
 [node name="Furniture" type="Node2D" parent="." unique_id=36341180]
 
 [node name="Rug" parent="Furniture" unique_id=1654191556 instance=ExtResource("2_hudjg")]
-position = Vector2(64, 96)
+position = Vector2(77, 82)
 
 [node name="Fireplace" parent="Furniture" unique_id=1075705021 instance=ExtResource("3_j07wj")]
-position = Vector2(12, 28)
+position = Vector2(11, 14)
 
 [node name="Bookshelf" parent="Furniture" unique_id=408045153 instance=ExtResource("4_y7muy")]
-position = Vector2(162, 22)
+position = Vector2(132, 10)
 
 [node name="CoffeeTable" parent="Furniture" unique_id=1503652853 instance=ExtResource("5_eac5k")]
-position = Vector2(97, 97)
+position = Vector2(89, 84)
 
 [node name="Armchair" parent="Furniture" unique_id=1108989282 instance=ExtResource("6_2cnlk")]
-position = Vector2(63, 98)
+position = Vector2(42, 71)
 
 [node name="FloorLamp" parent="Furniture" unique_id=1511546806 instance=ExtResource("7_tnwr3")]
-position = Vector2(162, 122)
+position = Vector2(19, 128)
 
 [node name="Sofa" parent="Furniture" unique_id=955958918 instance=ExtResource("8_2kvid")]
-position = Vector2(88, 145)
+position = Vector2(73, 133)
 
 [node name="Plant" parent="Furniture" unique_id=472728234 instance=ExtResource("9_yi5hv")]
-position = Vector2(192, 144)
+position = Vector2(78, 30)
+collision_layer = 2
 
 [node name="Items" type="Node2D" parent="." unique_id=1947372736]
 
 [node name="Saucer" parent="Items" unique_id=827831093 instance=ExtResource("10_06ll2")]
-position = Vector2(56, 72)
+position = Vector2(157, 139)
 item_data = ExtResource("11_wblbh")
 
 [node name="Pot" parent="Items" unique_id=360326297 instance=ExtResource("10_06ll2")]
-position = Vector2(40, 136)
+position = Vector2(56, 140)
 item_data = ExtResource("12_uh81s")
 
 [node name="Pan" parent="Items" unique_id=927794264 instance=ExtResource("10_06ll2")]
-position = Vector2(24, 120)
+position = Vector2(26, 114)
 item_data = ExtResource("13_fmf3r")
 
 [node name="Jar" parent="Items" unique_id=1920341304 instance=ExtResource("10_06ll2")]
@@ -78,11 +80,11 @@ position = Vector2(152, 88)
 item_data = ExtResource("15_63lv3")
 
 [node name="Cup" parent="Items" unique_id=276127906 instance=ExtResource("10_06ll2")]
-position = Vector2(184, 104)
+position = Vector2(136, 104)
 item_data = ExtResource("16_dlasf")
 
 [node name="Book" parent="Items" unique_id=556137559 instance=ExtResource("10_06ll2")]
-position = Vector2(56, 152)
+position = Vector2(28, 77)
 item_data = ExtResource("17_qllja")
 
 [node name="Candle" parent="Items" unique_id=1895610864 instance=ExtResource("10_06ll2")]
@@ -93,3 +95,20 @@ item_data = ExtResource("18_albvo")
 position = Vector2(56, 168)
 item_data = ExtResource("18_albvo")
 quantity = 2
+
+[node name="Exits" type="Node2D" parent="." unique_id=627700680]
+
+[node name="StairsUp" parent="Exits" unique_id=834752153 instance=ExtResource("19_wblbh")]
+position = Vector2(179, 80)
+target_room = "res://scenes/world/second_floor.tscn"
+target_spawn = "FromDownstairs"
+
+[node name="Spawns" type="Node2D" parent="." unique_id=1321072515]
+
+[node name="Start" type="Marker2D" parent="Spawns" unique_id=935750327]
+position = Vector2(120, 56)
+gizmo_extents = 8.0
+
+[node name="FromUpstairs" type="Marker2D" parent="Spawns" unique_id=1367453038]
+position = Vector2(184, 152)
+gizmo_extents = 8.0
