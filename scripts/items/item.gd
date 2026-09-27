@@ -16,6 +16,7 @@ func _ready() -> void:
 	_update_icon()
 	if Engine.is_editor_hint():
 		return
+	add_to_group("items")
 	body_entered.connect(_on_body_entered)
 
 func _update_icon() -> void:
