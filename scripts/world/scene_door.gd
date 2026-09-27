@@ -8,4 +8,4 @@ func _ready() -> void:
 
 func _on_body_entered(body: Node2D) -> void:
 	if target_scene != "" and body.is_in_group("player"):
-		SceneTransition.go_to(target_scene)
+		FadeTransition.go_to(target_scene)
