@@ -10,16 +10,17 @@
 [ext_resource type="PackedScene" uid="uid://6qgr88d56a0o" path="res://scenes/furniture/sofa.tscn" id="8_2kvid"]
 [ext_resource type="PackedScene" uid="uid://cljd1suxtqu7l" path="res://scenes/furniture/plant.tscn" id="9_yi5hv"]
 [ext_resource type="PackedScene" path="res://scenes/items/item.tscn" id="10_06ll2"]
-[ext_resource type="Resource" uid="uid://xcj0hc3osisl" path="res://resources/items/saucer.tres" id="11_wblbh"]
-[ext_resource type="Resource" uid="uid://dm26g5caoe74e" path="res://resources/items/pot.tres" id="12_uh81s"]
-[ext_resource type="Resource" uid="uid://07bss0meftxx" path="res://resources/items/pan.tres" id="13_fmf3r"]
-[ext_resource type="Resource" uid="uid://c12u6ifpouv5d" path="res://resources/items/jar.tres" id="14_b4w1u"]
-[ext_resource type="Resource" uid="uid://dkepnklcs45ne" path="res://resources/items/glass.tres" id="15_63lv3"]
-[ext_resource type="Resource" uid="uid://ck3jerb77ce3y" path="res://resources/items/cup.tres" id="16_dlasf"]
-[ext_resource type="Resource" uid="uid://bnpkhb3g7ay8" path="res://resources/items/book.tres" id="17_qllja"]
-[ext_resource type="Resource" uid="uid://cte0dqwub3lyf" path="res://resources/items/candle.tres" id="18_albvo"]
-[ext_resource type="Script" path="res://scripts/items/item_spawner.gd" id="19_spawn"]
+[ext_resource type="Resource" uid="uid://bqg6bse3igxkf" path="res://resources/items/saucer.tres" id="11_wblbh"]
+[ext_resource type="Resource" uid="uid://for51j67nxno" path="res://resources/items/pot.tres" id="12_uh81s"]
+[ext_resource type="Resource" uid="uid://dcbl0tsfngqkd" path="res://resources/items/pan.tres" id="13_fmf3r"]
+[ext_resource type="Resource" uid="uid://ds0axbli7vk67" path="res://resources/items/jar.tres" id="14_b4w1u"]
+[ext_resource type="Resource" uid="uid://bqkgfvbfn0ps1" path="res://resources/items/glass.tres" id="15_63lv3"]
+[ext_resource type="Resource" uid="uid://dve1c1swdsm6k" path="res://resources/items/cup.tres" id="16_dlasf"]
+[ext_resource type="Resource" uid="uid://hum1avtegar0" path="res://resources/items/book.tres" id="17_qllja"]
+[ext_resource type="Resource" uid="uid://b7pt3tmwypj8o" path="res://resources/items/candle.tres" id="18_albvo"]
+[ext_resource type="Script" uid="uid://buwtox1ggfkb5" path="res://scripts/items/item_spawner.gd" id="19_spawn"]
 [ext_resource type="Script" uid="uid://bp0qw6cgch5js" path="res://scripts/items/item_data.gd" id="20_idata"]
+[ext_resource type="PackedScene" path="res://scenes/furniture/stairs.tscn" id="21_stairs"]
 
 [node name="LivingRoom" type="Node2D" unique_id=841488708]
 
@@ -49,7 +50,7 @@ position = Vector2(89, 84)
 position = Vector2(42, 71)
 
 [node name="FloorLamp" parent="Furniture" unique_id=1511546806 instance=ExtResource("7_tnwr3")]
-position = Vector2(19, 128)
+position = Vector2(132, 112)
 
 [node name="Sofa" parent="Furniture" unique_id=955958918 instance=ExtResource("8_2kvid")]
 position = Vector2(73, 133)
@@ -99,7 +100,7 @@ quantity = 2
 
 [node name="Exits" type="Node2D" parent="." unique_id=627700680]
 
-[node name="StairsUp" parent="Exits" unique_id=834752153 instance=ExtResource("19_wblbh")]
+[node name="StairsUp" parent="Exits" unique_id=834752153 instance=ExtResource("21_stairs")]
 position = Vector2(179, 80)
 target_room = "res://scenes/world/second_floor.tscn"
 target_spawn = "FromDownstairs"
@@ -113,8 +114,8 @@ gizmo_extents = 8.0
 [node name="FromUpstairs" type="Marker2D" parent="Spawns" unique_id=1367453038]
 position = Vector2(184, 152)
 gizmo_extents = 8.0
-[node name="ItemSpawner" type="Node2D" parent="." node_paths=PackedStringArray("floor_layer")]
+
+[node name="ItemSpawner" type="Node2D" parent="." unique_id=28587376 node_paths=PackedStringArray("floor_layer")]
 script = ExtResource("19_spawn")
-item_scene = ExtResource("10_06ll2")
 item_pool = Array[ExtResource("20_idata")]([ExtResource("11_wblbh"), ExtResource("12_uh81s"), ExtResource("13_fmf3r"), ExtResource("14_b4w1u"), ExtResource("15_63lv3"), ExtResource("16_dlasf"), ExtResource("17_qllja"), ExtResource("18_albvo")])
 floor_layer = NodePath("../Floor")

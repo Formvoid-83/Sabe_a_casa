@@ -41,5 +41,4 @@ func _place_player_bottom_left() -> void:
 	if not found:
 		return
 
-	_player.global_position = _floor.to_global(_floor.map_to_local(best))
-	_player._target_position = _player.global_position
+	_player.teleport_to(_floor.to_global(_floor.map_to_local(best)))
