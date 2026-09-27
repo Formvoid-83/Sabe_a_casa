@@ -4,10 +4,10 @@
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sqcpu"]
 atlas = ExtResource("1_mfmiu")
-region = Rect2(80, 32, 32, 32)
+region = Rect2(84.108665, 43.904152, 23.982658, 19.108707)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3q7rv"]
-size = Vector2(26, 22)
+size = Vector2(23, 19)
 
 [node name="CoffeeTable" type="StaticBody2D" unique_id=1503652853]
 collision_mask = 0
@@ -17,5 +17,5 @@ texture = SubResource("AtlasTexture_sqcpu")
 centered = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1965222062]
-position = Vector2(16, 21)
+position = Vector2(11.5, 9.5)
 shape = SubResource("RectangleShape2D_3q7rv")

@@ -44,6 +44,12 @@ func remove_item(item: ItemData, amount: int = 1) -> bool:
 	inventory_changed.emit()
 	return remaining <= 0
 
+func clear() -> void:
+	if slots.is_empty():
+		return
+	slots.clear()
+	inventory_changed.emit()
+
 func get_total_count(item: ItemData) -> int:
 	var total := 0
 	for slot in slots:
