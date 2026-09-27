@@ -23,7 +23,11 @@ config/icon="res://icon.svg"
 
 Inventory="*res://scripts/globals/inventory.gd"
 Bubbles="*res://scripts/globals/bubbles.gd"
+<<<<<<< HEAD
 RoomManager="*res://scripts/globals/room_manager.gd"
+=======
+SceneTransition="*res://scripts/globals/scene_transition.gd"
+>>>>>>> feature/kitchen
 
 [display]
 

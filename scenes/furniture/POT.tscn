@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://cldyo3g13t3me"]
+
+[ext_resource type="Texture2D" uid="uid://b15ibdv8av54m" path="res://sprites/TopDownHouse_SmallItems.png" id="1_dytb7"]
+[ext_resource type="Script" path="res://scripts/furniture/pot.gd" id="2_potscript"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8b2rb"]
+atlas = ExtResource("1_dytb7")
+region = Rect2(81.14013, 65.99641, 14.144676, 13.342514)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pgpvy"]
+size = Vector2(14, 13)
+
+[node name="Bookshelf" type="StaticBody2D" unique_id=408045153]
+collision_mask = 0
+script = ExtResource("2_potscript")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=59138170]
+texture = SubResource("AtlasTexture_8b2rb")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1888087467]
+position = Vector2(7, 6.5)
+shape = SubResource("RectangleShape2D_pgpvy")
+disabled = true

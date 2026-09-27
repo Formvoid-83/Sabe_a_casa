@@ -10,7 +10,7 @@ script = ExtResource("1_6m72w")
 start_room = NodePath("LivingRoom")
 
 [node name="LivingRoom" parent="." unique_id=841488708 instance=ExtResource("1_dlabj")]
-position = Vector2(-273, -27)
+position = Vector2(18, 0)
 
 [node name="Player" parent="." unique_id=2074919889 instance=ExtResource("2")]
 position = Vector2(-192, 56)
