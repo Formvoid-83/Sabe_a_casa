@@ -10,6 +10,8 @@ const STAGGER_DELAY := 0.12
 # offsets in the scene), so aim the landing point at its visual middle instead.
 const VISUAL_CENTER_OFFSET := Vector2(7, 6.5)
 
+const BOILING_SOUND := preload("res://sounds/Boiling.wav")
+
 func _ready() -> void:
 	add_to_group("cooking_pot")
 
@@ -18,8 +20,10 @@ func receive_items(from_position: Vector2) -> void:
 	if snapshot.is_empty():
 		return
 	Inventory.clear()
+	Sfx.play(BOILING_SOUND)
 	for slot in snapshot:
 		var item: ItemData = slot["item"]
+		Recipe.deliver(item, slot["quantity"])
 		_spawn_flying_item(item.icon, from_position)
 		await get_tree().create_timer(STAGGER_DELAY).timeout
 

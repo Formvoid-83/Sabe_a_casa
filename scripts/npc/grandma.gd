@@ -1,6 +1,7 @@
 extends StaticBody2D
 
-const DIALOGUE_LINE := "Coloquemos todo esto en la olla"
+const GIVE_ITEMS_LINE := "Coloquemos todo esto en la olla"
+const NEEDS_INGREDIENTS_LINE := "Necesitamos ingredientes para la sopa casera"
 
 @onready var _sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var _interact_area: Area2D = $InteractArea
@@ -28,12 +29,16 @@ func _unhandled_input(event: InputEvent) -> void:
 func _talk() -> void:
 	_busy = true
 	_sprite.play("talk")
-	Bubbles.say(DIALOGUE_LINE)
 
-	var pot: Node = get_tree().get_first_node_in_group("cooking_pot")
-	var player: Node2D = get_tree().get_first_node_in_group("player")
-	if pot != null and player != null and pot.has_method("receive_items"):
-		pot.receive_items(player.global_position)
+	if Inventory.slots.is_empty():
+		Bubbles.say(NEEDS_INGREDIENTS_LINE)
+		Recipe.reveal()
+	else:
+		Bubbles.say(GIVE_ITEMS_LINE)
+		var pot: Node = get_tree().get_first_node_in_group("cooking_pot")
+		var player: Node2D = get_tree().get_first_node_in_group("player")
+		if pot != null and player != null and pot.has_method("receive_items"):
+			pot.receive_items(player.global_position)
 
 	await get_tree().create_timer(Bubbles.display_time).timeout
 	_sprite.play("idle")

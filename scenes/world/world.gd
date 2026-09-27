@@ -13,6 +13,7 @@ extends Node2D
 @onready var _walls: TileMapLayer = $LivingRoom/Walls
 
 func _ready() -> void:
+	Music.play_main_theme()
 	RoomManager.setup(self, _player, start_room, start_spawn)
 	Bubbles.say("guille puto",3.0)
 	if SceneTransition.arrived_by_transition:

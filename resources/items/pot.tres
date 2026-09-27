@@ -1,15 +1,15 @@
 [gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://for51j67nxno"]
 
 [ext_resource type="Script" uid="uid://bp0qw6cgch5js" path="res://scripts/items/item_data.gd" id="1"]
-[ext_resource type="Texture2D" uid="uid://b15ibdv8av54m" path="res://sprites/TopDownHouse_SmallItems.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://dvovcohpsvc32" path="res://sprites/FOOD_NL.png" id="1_eu18j"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1"]
-atlas = ExtResource("2")
-region = Rect2(64, 64, 16, 16)
+atlas = ExtResource("1_eu18j")
+region = Rect2(93.35855, 14.850559, 15.7193985, 17.383564)
 
 [resource]
 script = ExtResource("1")
-id = "pot"
-display_name = "Pot"
+id = "mushroom"
+display_name = "Mushroom"
 max_stack = 10
 icon = SubResource("AtlasTexture_1")

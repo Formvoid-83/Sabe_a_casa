@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dvva3wj018jyi" path="res://scenes/furniture/Counter2.tscn" id="5_jt5qu"]
 [ext_resource type="PackedScene" uid="uid://b5tpudfpfmoeu" path="res://scenes/furniture/Fridge.tscn" id="6_e17ug"]
 [ext_resource type="PackedScene" uid="uid://cldyo3g13t3me" path="res://scenes/furniture/POT.tscn" id="7_fj22q"]
-[ext_resource type="PackedScene" path="res://scenes/npc/grandma.tscn" id="8_grandma"]
+[ext_resource type="PackedScene" uid="uid://yygy7kxtvuoc" path="res://scenes/npc/grandma.tscn" id="8_grandma"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6gwww"]
 size = Vector2(32, 48)
