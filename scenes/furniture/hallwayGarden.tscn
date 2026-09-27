@@ -1,11 +1,11 @@
-[gd_scene format=3 uid="uid://cuhldjmkr04uf"]
+[gd_scene format=3 uid="uid://dkm3l31v8if04"]
 
-[ext_resource type="Script" uid="uid://ywverq42qkyp" path="res://scripts/world/room_exit.gd" id="1_wld4m"]
-[ext_resource type="Texture2D" uid="uid://f6ee7ddtwj3s" path="res://sprites/TopDownHouse_DoorsAndWindows.png" id="2_ain5q"]
+[ext_resource type="Script" uid="uid://ywverq42qkyp" path="res://scripts/world/room_exit.gd" id="1_s044d"]
+[ext_resource type="Texture2D" uid="uid://b2yop33exvudr" path="res://sprites/TopDownHouse_FloorsAndWalls.png" id="2_s044d"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qilyo"]
-atlas = ExtResource("2_ain5q")
-region = Rect2(0, 16, 32, 48)
+atlas = ExtResource("2_s044d")
+region = Rect2(31.405556, 79.408195, 32, 48)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4kftk"]
 size = Vector2(32, 20)
@@ -13,7 +13,7 @@ size = Vector2(32, 20)
 [node name="Stairs" type="Area2D" unique_id=834752153]
 collision_layer = 4
 collision_mask = 2
-script = ExtResource("1_wld4m")
+script = ExtResource("1_s044d")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=670341218]
 texture = SubResource("AtlasTexture_qilyo")

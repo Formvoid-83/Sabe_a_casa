@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://bwy1t16irqh7e"]
+
+[ext_resource type="Texture2D" uid="uid://dsfuyd6sjnmhw" path="res://sprites/Farm.png" id="1_ljo4g"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1cnka"]
+atlas = ExtResource("1_ljo4g")
+region = Rect2(288.023, 9.025939, 16.031189, 23.112144)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ljo4g"]
+size = Vector2(16, 15)
+
+[node name="Box" type="RigidBody2D" unique_id=536761743]
+collision_layer = 3
+gravity_scale = 0.0
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=628936918]
+texture = SubResource("AtlasTexture_1cnka")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2093990455]
+position = Vector2(0, 3.5)
+shape = SubResource("RectangleShape2D_ljo4g")

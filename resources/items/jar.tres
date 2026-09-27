@@ -1,15 +1,15 @@
 [gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://ds0axbli7vk67"]
 
 [ext_resource type="Script" uid="uid://bp0qw6cgch5js" path="res://scripts/items/item_data.gd" id="1"]
-[ext_resource type="Texture2D" uid="uid://b15ibdv8av54m" path="res://sprites/TopDownHouse_SmallItems.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://b15ibdv8av54m" path="res://sprites/TopDownHouse_SmallItems.png" id="1_1mihy"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_1"]
-atlas = ExtResource("2")
-region = Rect2(21.180967, 118.05119, 6.0434475, 9.174644)
+[sub_resource type="AtlasTexture" id="AtlasTexture_sg4xq"]
+atlas = ExtResource("1_1mihy")
+region = Rect2(20.82626, 117.81426, 6.3669777, 9.329826)
 
 [resource]
 script = ExtResource("1")
 id = "jar"
 display_name = "Jar"
 max_stack = 20
-icon = SubResource("AtlasTexture_1")
+icon = SubResource("AtlasTexture_sg4xq")

@@ -13,8 +13,15 @@ class_name ItemSpawner
 @export var cell_size: int = 16
 @export_flags_2d_physics var obstacle_mask: int = 1 # same "World" layer the player collides with
 @export var player_clearance: float = 16.0
+@export var door_clearance: float = 32.0
+## When false, nothing calls spawn_items() automatically - useful when a
+## parent script needs to run several spawners one after another so they
+## don't pick overlapping tiles (see Garden's script).
+@export var auto_spawn: bool = true
 
 func _ready() -> void:
+	if not auto_spawn:
+		return
 	# Wait one physics frame so the player has joined its group and
 	# furniture colliders are registered for point queries.
 	await get_tree().physics_frame
@@ -55,21 +62,24 @@ func _get_free_positions() -> Array[Vector2]:
 	var half_tile := (floor_layer.tile_set.tile_size.x if floor_layer != null else cell_size) * 0.5
 	var player := get_tree().get_first_node_in_group("player") as Node2D
 	var existing_items := get_tree().get_nodes_in_group("items")
+	var doors := get_tree().get_nodes_in_group("doors")
 
 	var result: Array[Vector2] = []
 	for pos in _get_candidate_positions():
 		if player != null and pos.distance_to(player.global_position) < player_clearance:
 			continue
-		if _is_near_item(pos, existing_items, half_tile):
+		if _is_near_any(pos, existing_items, half_tile):
+			continue
+		if _is_near_any(pos, doors, door_clearance):
 			continue
 		if _is_blocked(pos):
 			continue
 		result.append(pos)
 	return result
 
-func _is_near_item(pos: Vector2, items: Array[Node], radius: float) -> bool:
-	for item in items:
-		if item is Node2D and pos.distance_to(item.global_position) < radius:
+func _is_near_any(pos: Vector2, nodes: Array[Node], radius: float) -> bool:
+	for node in nodes:
+		if node is Node2D and pos.distance_to(node.global_position) < radius:
 			return true
 	return false
 

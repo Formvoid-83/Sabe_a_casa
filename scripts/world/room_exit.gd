@@ -14,6 +14,7 @@ class_name RoomExit
 @export var target_spawn: String = ""
 
 func _ready() -> void:
+	add_to_group("doors")
 	body_entered.connect(_on_body_entered)
 
 func _on_body_entered(body: Node2D) -> void:

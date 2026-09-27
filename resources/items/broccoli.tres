@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://cb8j1ouu5d86"]
+
+[ext_resource type="Texture2D" uid="uid://dsfuyd6sjnmhw" path="res://sprites/Farm.png" id="1_xdr2d"]
+[ext_resource type="Script" uid="uid://bp0qw6cgch5js" path="res://scripts/items/item_data.gd" id="2_rybi3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sg4xq"]
+atlas = ExtResource("1_xdr2d")
+region = Rect2(128.02988, 175.78265, 15.697205, 16.05719)
+
+[resource]
+script = ExtResource("2_rybi3")
+id = "broccoli"
+display_name = "Broccoli"
+max_stack = 20
+icon = SubResource("AtlasTexture_sg4xq")

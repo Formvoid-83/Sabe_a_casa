@@ -3,9 +3,7 @@
 [ext_resource type="Script" uid="uid://ce4n5hhro4vrl" path="res://scenes/garden/garden.gd" id="1_garden"]
 [ext_resource type="Texture2D" uid="uid://du177r75ayci2" path="res://sprites/Floors_Tiles.png" id="2_642rf"]
 [ext_resource type="Texture2D" uid="uid://be2xuujeow6sg" path="res://sprites/Furniture.png" id="3_xm2g2"]
-[ext_resource type="PackedScene" uid="uid://dmugy8822a65p" path="res://scenes/player/player.tscn" id="4_xm2g2"]
-[ext_resource type="PackedScene" path="res://scenes/ui/inventory_ui.tscn" id="5_fo1qp"]
-[ext_resource type="Script" uid="uid://du67jlwyb36qe" path="res://scripts/world/scene_transition.gd" id="6_3gej8"]
+[ext_resource type="Script" uid="uid://ywverq42qkyp" path="res://scripts/world/room_exit.gd" id="6_3gej8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fo1qp"]
 texture = ExtResource("2_642rf")
@@ -1377,17 +1375,21 @@ tile_set = SubResource("TileSet_loxy7")
 tile_map_data = PackedByteArray("AAALAAAAAAABACAAAAAKAAAAAAAAACAAAAAJAAAAAAACAB8AAAAIAAAAAAACAB8AAAAHAAAAAAACAB8AAAAGAAAAAAACAB8AAAAFAAAAAAACAB8AAAAEAAAAAAACAB8AAAADAAAAAAACAB8AAAACAAAAAAACAB8AAAABAAAAAAACAB8AAAAAAAAAAAAAABwAAAAMAAAAAAACAB8AAAAAAAEAAAAAAB0AAAAAAAIAAAAAAB0AAAAAAAMAAAAAAB0AAAAAAAQAAAAAAB0AAAAAAAUAAAAAAB0AAAAAAAYAAAAAAB0AAAAAAAcAAAAAAB0AAAAAAAgAAAAAAB0AAAAAAAkAAAAAAB0AAAAAAAoAAAAAAB0AAAAAAAsAAAAAAB4AAAABAAsAAAACAB8AAAACAAsAAAACAB8AAAADAAsAAAACAB8AAAAEAAsAAAACAB8AAAAFAAsAAAACAB8AAAAGAAsAAAACAB8AAAAHAAsAAAACAB8AAAAIAAsAAAACAB8AAAAJAAsAAAACAB8AAAAKAAsAAAACAB8AAAALAAsAAAACAB8AAAAMAAsAAAACAB8AAAANAAsAAAADAB8AAAANAAoAAAAEAB0AAAANAAkAAAAEAB0AAAANAAgAAAAEAB0AAAANAAcAAAAEAB0AAAANAAYAAAAEAB0AAAANAAEAAAAEAB0AAAANAAIAAAAEAB0AAAANAAMAAAAEAB0AAAANAAQAAAAEAB0AAAANAAUAAAAEAB0AAAANAAAAAAAEABwAAAABAAoAAAADABkAAAACAAoAAAAEABkAAAADAAoAAAADABkAAAAEAAoAAAAEABkAAAAFAAoAAAADABkAAAAGAAoAAAAEABkAAAAHAAoAAAADABkAAAAIAAoAAAAEABkAAAAKAAoAAAADABkAAAALAAoAAAAEABkAAAAMAAoAAAADABkAAAA=")
 tile_set = SubResource("TileSet_vpohn")
 
-[node name="Player" parent="." unique_id=1848280044 instance=ExtResource("4_xm2g2")]
-position = Vector2(178, 31)
-
-[node name="InventoryUI" parent="." unique_id=92038643 instance=ExtResource("5_fo1qp")]
-visible = false
-
 [node name="Area2D" type="Area2D" parent="." unique_id=2042334974]
 position = Vector2(175, 10)
 scale = Vector2(2, 2)
+collision_layer = 4
+collision_mask = 2
 script = ExtResource("6_3gej8")
+target_room = "res://scenes/world/living_room.tscn"
+target_spawn = "ToGarden"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2142784157]
 position = Vector2(0.5, -1)
 shape = SubResource("RectangleShape2D_vpohn")
+
+[node name="Spawns" type="Node2D" parent="." unique_id=2033301175]
+
+[node name="Start" type="Marker2D" parent="Spawns" unique_id=1087647469]
+position = Vector2(176, 32)
+gizmo_extents = 8.0

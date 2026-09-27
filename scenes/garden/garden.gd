@@ -10,15 +10,35 @@ const WORLD_LAYER := 1 # physics layer "World" — what the player's movement ch
 @export var item_count: int = 17
 @export var spawn_area: Rect2 = Rect2(10, 10, 200, 170)
 
+@export var potato_item: ItemData = preload("res://resources/items/book.tres")
+@export var potato_count: int = 2
+
 func _ready() -> void:
 	_build_boundaries()
-	
+
+	# Both spawners share the same area, so run them one after another
+	# (auto_spawn off) instead of letting each spawn on its own first
+	# physics frame - otherwise they could pick overlapping tiles.
 	var spawner := ItemSpawner.new()
 	spawner.name = "ItemSpawner"
+	spawner.auto_spawn = false
 	spawner.item_pool = garden_items
 	spawner.spawn_count = item_count
 	spawner.spawn_area = spawn_area
 	add_child(spawner)
+
+	var potato_spawner := ItemSpawner.new()
+	potato_spawner.name = "PotatoSpawner"
+	potato_spawner.auto_spawn = false
+	potato_spawner.item_pool = [potato_item]
+	potato_spawner.spawn_count = potato_count
+	potato_spawner.spawn_area = spawn_area
+	add_child(potato_spawner)
+
+	await get_tree().physics_frame
+	spawner.spawn_items()
+	potato_spawner.spawn_items()
+
 	Bubbles.say("cilantro... que?, pere... que?" , 3 )
 	# Wait until the first bubble has fully closed, then show the next one.
 	await Bubbles.closed

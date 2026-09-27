@@ -14,6 +14,7 @@ static var arrived_by_transition := false
 var _triggered := false
 
 func _ready() -> void:
+	add_to_group("doors")
 	set_collision_mask_value(PLAYER_LAYER, true)
 	body_entered.connect(_on_body_entered)
 

@@ -7,6 +7,7 @@ extends Node
 # kitchen (two separate top-level scenes swapped via change_scene_to_file).
 
 const MAIN_THEME := preload("res://sounds/main.ogg")
+const MENU_THEME := preload("res://sounds/menu.ogg")
 
 var _player: AudioStreamPlayer
 var _current_stream: AudioStream
@@ -27,6 +28,9 @@ func play(stream: AudioStream) -> void:
 
 func play_main_theme() -> void:
 	play(MAIN_THEME)
+
+func play_menu_theme() -> void:
+	play(MENU_THEME)
 
 func stop() -> void:
 	_current_stream = null

@@ -24,20 +24,39 @@ func _physics_process(_delta: float) -> void:
 		direction = Vector2.ZERO
 	velocity = direction * speed
 	move_and_slide()
+	for i in get_slide_collision_count():
+		var collision := get_slide_collision(i)
+		var collider := collision.get_collider()
+	
+		if collider is RigidBody2D:
+			var push_direction := direction
+	
+			if push_direction != Vector2.ZERO:
+				collider.apply_central_force(push_direction * 5.0)
 	if direction == Vector2.ZERO:
 		_sprite.play("idle")
 		return
 	if direction.x != 0.0:
 		_sprite.flip_h = direction.x < 0.0
 	_sprite.play("walk")
+	
 
 func _get_input_direction() -> Vector2:
-	var direction := Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
-	if direction != Vector2.ZERO:
-		return direction
-	direction = Vector2(
+	var direction := Vector2(
 		float(Input.is_physical_key_pressed(KEY_D)) - float(Input.is_physical_key_pressed(KEY_A)),
-		float(Input.is_physical_key_pressed(KEY_S)) - float(Input.is_physical_key_pressed(KEY_W)))
+		float(Input.is_physical_key_pressed(KEY_S)) - float(Input.is_physical_key_pressed(KEY_W))
+	)
+	if direction == Vector2.ZERO:
+		direction = Input.get_vector(
+			"ui_left",
+			"ui_right",
+			"ui_up",
+			"ui_down"
+		)
+	if direction.x != 0:
+		direction.y = 0
+	else:
+		direction.y = sign(direction.y)
 	return direction.normalized()
 
 ## Instantly moves the player (used by RoomManager when changing rooms).
