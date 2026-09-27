@@ -9,5 +9,8 @@ region = Rect2(112.01935, 216.76678, 16.223267, 24.928436)
 
 [resource]
 script = ExtResource("1_lqurh")
+id = "cilantro"
+display_name = "Cilantro"
+max_stack = 20
 icon = SubResource("AtlasTexture_rqyfc")
 metadata/_custom_type_script = "uid://bp0qw6cgch5js"

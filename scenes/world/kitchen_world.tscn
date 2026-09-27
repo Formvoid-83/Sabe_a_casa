@@ -3,8 +3,11 @@
 [ext_resource type="PackedScene" path="res://scenes/world/kitchen.tscn" id="1_kitchen"]
 [ext_resource type="PackedScene" path="res://scenes/player/player.tscn" id="2_player"]
 [ext_resource type="PackedScene" path="res://scenes/ui/inventory_ui.tscn" id="3_ui"]
+[ext_resource type="Script" path="res://scenes/world/kitchen_world.gd" id="4_music"]
+[ext_resource type="PackedScene" path="res://scenes/ui/recipe_ui.tscn" id="5_recipe"]
 
 [node name="KitchenWorld" type="Node2D"]
+script = ExtResource("4_music")
 
 [node name="Kitchen" parent="." instance=ExtResource("1_kitchen")]
 
@@ -12,3 +15,5 @@
 position = Vector2(96, 112)
 
 [node name="InventoryUI" parent="." instance=ExtResource("3_ui")]
+
+[node name="RecipeUI" parent="." instance=ExtResource("5_recipe")]

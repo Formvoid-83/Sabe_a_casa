@@ -2,6 +2,8 @@
 extends Area2D
 class_name Item
 
+const PICKUP_SOUND := preload("res://sounds/pick-up.ogg")
+
 # Setter refreshes the icon so the item is visible while editing the scene.
 @export var item_data: ItemData:
 	set(value):
@@ -26,4 +28,5 @@ func _on_body_entered(body: Node2D) -> void:
 	if item_data == null or not body.is_in_group("player"):
 		return
 	Inventory.add_item(item_data, quantity)
+	Sfx.play(PICKUP_SOUND)
 	queue_free()

@@ -9,19 +9,19 @@
 [ext_resource type="PackedScene" path="res://scenes/furniture/floor_lamp.tscn" id="7_tnwr3"]
 [ext_resource type="PackedScene" uid="uid://6qgr88d56a0o" path="res://scenes/furniture/sofa.tscn" id="8_2kvid"]
 [ext_resource type="PackedScene" uid="uid://cljd1suxtqu7l" path="res://scenes/furniture/plant.tscn" id="9_yi5hv"]
-[ext_resource type="PackedScene" path="res://scenes/items/item.tscn" id="10_06ll2"]
-[ext_resource type="Resource" uid="uid://dvriovpwc3owa" path="res://resources/items/saucer.tres" id="11_wblbh"]
-[ext_resource type="Resource" uid="uid://cch5tjrk1k07f" path="res://resources/items/pot.tres" id="12_uh81s"]
-[ext_resource type="Resource" uid="uid://co5nxxfgo5idn" path="res://resources/items/pan.tres" id="13_fmf3r"]
-[ext_resource type="Resource" uid="uid://d6ptmoqu7c8o" path="res://resources/items/jar.tres" id="14_b4w1u"]
-[ext_resource type="Resource" uid="uid://d47ao08mw5h1" path="res://resources/items/glass.tres" id="15_63lv3"]
-[ext_resource type="Resource" uid="uid://brxgysrv2xjk2" path="res://resources/items/cup.tres" id="16_dlasf"]
-[ext_resource type="Resource" uid="uid://dppqwhaccp2bo" path="res://resources/items/book.tres" id="17_qllja"]
-[ext_resource type="Resource" uid="uid://dyhil6mdkktnj" path="res://resources/items/candle.tres" id="18_albvo"]
+[ext_resource type="PackedScene" uid="uid://di3r4gemcjehf" path="res://scenes/items/item.tscn" id="10_06ll2"]
+[ext_resource type="Resource" uid="uid://bqg6bse3igxkf" path="res://resources/items/saucer.tres" id="11_wblbh"]
+[ext_resource type="Resource" uid="uid://for51j67nxno" path="res://resources/items/pot.tres" id="12_uh81s"]
+[ext_resource type="Resource" uid="uid://dcbl0tsfngqkd" path="res://resources/items/pan.tres" id="13_fmf3r"]
+[ext_resource type="Resource" uid="uid://ds0axbli7vk67" path="res://resources/items/jar.tres" id="14_b4w1u"]
+[ext_resource type="Resource" uid="uid://bqkgfvbfn0ps1" path="res://resources/items/glass.tres" id="15_63lv3"]
+[ext_resource type="Resource" uid="uid://dve1c1swdsm6k" path="res://resources/items/cup.tres" id="16_dlasf"]
+[ext_resource type="Resource" uid="uid://hum1avtegar0" path="res://resources/items/book.tres" id="17_qllja"]
+[ext_resource type="Resource" uid="uid://b7pt3tmwypj8o" path="res://resources/items/candle.tres" id="18_albvo"]
+[ext_resource type="Script" uid="uid://dyig52mx3c78t" path="res://scripts/world/scene_door.gd" id="19_scenedoor"]
 [ext_resource type="Script" uid="uid://buwtox1ggfkb5" path="res://scripts/items/item_spawner.gd" id="19_spawn"]
 [ext_resource type="Script" uid="uid://bp0qw6cgch5js" path="res://scripts/items/item_data.gd" id="20_idata"]
 [ext_resource type="PackedScene" path="res://scenes/furniture/stairs.tscn" id="21_stairs"]
-[ext_resource type="Script" uid="uid://dyig52mx3c78t" path="res://scripts/world/scene_door.gd" id="19_scenedoor"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kitchendoor"]
 size = Vector2(32, 48)
@@ -65,11 +65,11 @@ collision_layer = 2
 
 [node name="Items" type="Node2D" parent="." unique_id=1947372736]
 
-[node name="Saucer" parent="Items" unique_id=827831093 instance=ExtResource("10_06ll2")]
+[node name="Garlic" parent="Items" unique_id=827831093 instance=ExtResource("10_06ll2")]
 position = Vector2(157, 139)
 item_data = ExtResource("11_wblbh")
 
-[node name="Pot" parent="Items" unique_id=360326297 instance=ExtResource("10_06ll2")]
+[node name="Mushroom" parent="Items" unique_id=360326297 instance=ExtResource("10_06ll2")]
 position = Vector2(56, 140)
 item_data = ExtResource("12_uh81s")
 
@@ -81,7 +81,7 @@ item_data = ExtResource("13_fmf3r")
 position = Vector2(136, 72)
 item_data = ExtResource("14_b4w1u")
 
-[node name="Glass" parent="Items" unique_id=1819876794 instance=ExtResource("10_06ll2")]
+[node name="Egg" parent="Items" unique_id=1819876794 instance=ExtResource("10_06ll2")]
 position = Vector2(152, 88)
 item_data = ExtResource("15_63lv3")
 
@@ -89,15 +89,15 @@ item_data = ExtResource("15_63lv3")
 position = Vector2(136, 104)
 item_data = ExtResource("16_dlasf")
 
-[node name="Book" parent="Items" unique_id=556137559 instance=ExtResource("10_06ll2")]
+[node name="Potatoe" parent="Items" unique_id=556137559 instance=ExtResource("10_06ll2")]
 position = Vector2(28, 77)
 item_data = ExtResource("17_qllja")
 
-[node name="Candle" parent="Items" unique_id=1895610864 instance=ExtResource("10_06ll2")]
+[node name="Cheese" parent="Items" unique_id=1895610864 instance=ExtResource("10_06ll2")]
 position = Vector2(40, 168)
 item_data = ExtResource("18_albvo")
 
-[node name="Candle2" parent="Items" unique_id=667248354 instance=ExtResource("10_06ll2")]
+[node name="Cheese2" parent="Items" unique_id=667248354 instance=ExtResource("10_06ll2")]
 position = Vector2(56, 168)
 item_data = ExtResource("18_albvo")
 quantity = 2
@@ -123,6 +123,7 @@ gizmo_extents = 8.0
 script = ExtResource("19_spawn")
 item_pool = Array[ExtResource("20_idata")]([ExtResource("11_wblbh"), ExtResource("12_uh81s"), ExtResource("13_fmf3r"), ExtResource("14_b4w1u"), ExtResource("15_63lv3"), ExtResource("16_dlasf"), ExtResource("17_qllja"), ExtResource("18_albvo")])
 floor_layer = NodePath("../Floor")
+
 [node name="KitchenDoor" type="Area2D" parent="." unique_id=273735001]
 position = Vector2(112, 24)
 collision_layer = 0

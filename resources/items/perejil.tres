@@ -9,5 +9,8 @@ region = Rect2(111.97958, 169.29291, 16.906738, 23.492325)
 
 [resource]
 script = ExtResource("1_rrg4r")
+id = "perejil"
+display_name = "Perejil"
+max_stack = 20
 icon = SubResource("AtlasTexture_8s8bj")
 metadata/_custom_type_script = "uid://bp0qw6cgch5js"

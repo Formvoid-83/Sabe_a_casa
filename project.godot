@@ -25,6 +25,9 @@ Inventory="*res://scripts/globals/inventory.gd"
 Bubbles="*res://scripts/globals/bubbles.gd"
 RoomManager="*res://scripts/globals/room_manager.gd"
 FadeTransition="*res://scripts/globals/scene_transition.gd"
+Music="*res://scripts/globals/music.gd"
+Sfx="*res://scripts/globals/sfx.gd"
+Recipe="*res://scripts/globals/recipe.gd"
 
 [display]
 

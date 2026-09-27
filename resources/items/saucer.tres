@@ -1,15 +1,15 @@
 [gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://bqg6bse3igxkf"]
 
 [ext_resource type="Script" uid="uid://bp0qw6cgch5js" path="res://scripts/items/item_data.gd" id="1"]
-[ext_resource type="Texture2D" uid="uid://b15ibdv8av54m" path="res://sprites/TopDownHouse_SmallItems.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://dsfuyd6sjnmhw" path="res://sprites/Farm.png" id="1_d2a8n"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1"]
-atlas = ExtResource("2")
-region = Rect2(0, 64, 16, 16)
+atlas = ExtResource("1_d2a8n")
+region = Rect2(128.23001, 208.50372, 14.659973, 15.186188)
 
 [resource]
 script = ExtResource("1")
-id = "saucer"
-display_name = "Saucer"
+id = "garlic"
+display_name = "Garlic"
 max_stack = 20
 icon = SubResource("AtlasTexture_1")

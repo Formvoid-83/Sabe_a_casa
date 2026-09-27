@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://bt80ss6myu8p0" path="res://scenes/world/living_room.tscn" id="1_dlabj"]
 [ext_resource type="PackedScene" uid="uid://b8o5sh7nt11qr" path="res://scenes/player/player.tscn" id="2"]
 [ext_resource type="PackedScene" path="res://scenes/ui/inventory_ui.tscn" id="12"]
+[ext_resource type="PackedScene" path="res://scenes/ui/recipe_ui.tscn" id="13"]
 
 [node name="World" type="Node2D" unique_id=291971835 node_paths=PackedStringArray("start_room")]
 script = ExtResource("1_6m72w")
@@ -17,3 +18,5 @@ position = Vector2(-192, 56)
 
 [node name="InventoryUI" parent="." unique_id=864470756 instance=ExtResource("12")]
 visible = false
+
+[node name="RecipeUI" parent="." instance=ExtResource("13")]
