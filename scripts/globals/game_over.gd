@@ -6,8 +6,7 @@ extends Node
 
 const END_SCREEN := "res://scenes/menu/end_screen.tscn"
 const BAD_ENDING_MESSAGE := "Buen trabajo, pero a la sopa le falta algo"
-# TODO: replace with the real good ending text/flow once it's designed.
-const GOOD_ENDING_MESSAGE := "¡Felicidades! (Final bueno pendiente)"
+const GOOD_ENDING_MESSAGE := "Nada como el sabor a hogar ¡Gracias por jugar!"
 
 var pending_message := ""
 
