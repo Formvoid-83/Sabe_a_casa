@@ -11,7 +11,7 @@ const WORLD_LAYER := 1 # physics layer "World" — what the player's movement ch
 @export var item_count: int = 17
 @export var spawn_area: Rect2 = Rect2(10, 10, 200, 170)
 
-@export var potato_item: ItemData = preload("res://resources/items/book.tres")
+@export var potato_item: ItemData = preload("res://resources/items/potatoe.tres")
 @export var potato_count: int = 2
 
 func _ready() -> void:
