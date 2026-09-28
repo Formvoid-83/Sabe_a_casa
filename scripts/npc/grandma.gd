@@ -2,6 +2,7 @@ extends StaticBody2D
 
 const GIVE_ITEMS_LINE := "Coloquemos todo esto en la olla"
 const NEEDS_INGREDIENTS_LINE := "Necesitamos ingredientes para la sopa casera"
+const NEEDS_CILANTRO := "En el jardin hay cilantro. Ojo, cuidadito con traerme perejil!"
 const READY_QUESTION_LINE := "¿La sopa ya está lista?"
 const ALMOST_PERFECT_LINE := "Casi perfecta, pero le falta algo..."
 const NOW_PERFECT_LINE := "¡Ahora está perfecta!"
@@ -11,6 +12,7 @@ const CHAOS_SURVIVORS := ["KitchenOn", "Pot"]
 
 const CHAOS_SOUND_INTERVAL := 0.12
 const CHAOS_SETTLE_TIME := 0.6
+const PEREJIL_ITEM: ItemData = preload("res://resources/items/perejil.tres")
 
 ## Tiny signal carrier so _prompt_yes_no() can `await` a button press.
 class YesNoResult extends RefCounted:
@@ -44,15 +46,21 @@ func _talk() -> void:
 	_sprite.play("talk")
 
 	if Inventory.slots.is_empty():
-		Bubbles.say(NEEDS_INGREDIENTS_LINE)
+		Bubbles.say(NEEDS_INGREDIENTS_LINE, 3)
+		await Bubbles.closed
+		Bubbles.say(NEEDS_CILANTRO)
 		Recipe.reveal()
 		await get_tree().create_timer(Bubbles.display_time).timeout
 	else:
 		Bubbles.say(GIVE_ITEMS_LINE)
 		var pot: Node = get_tree().get_first_node_in_group("cooking_pot")
 		var player: Node2D = get_tree().get_first_node_in_group("player")
+		var hasPerejil: bool = Inventory.get_total_count(PEREJIL_ITEM) > 0 
 		if pot != null and player != null and pot.has_method("receive_items"):
 			await pot.receive_items(player.global_position)
+			if hasPerejil:
+				await Bubbles.closed
+				Bubbles.say("Te dije que no trajeras PEREJIL >:(", 3)
 		else:
 			await get_tree().create_timer(Bubbles.display_time).timeout
 		await _ask_if_ready()
@@ -62,6 +70,7 @@ func _talk() -> void:
 
 ## Asks "is the soup ready?" and ends the game if the player says yes.
 func _ask_if_ready() -> void:
+	await Bubbles.closed
 	var yes := await _prompt_yes_no(READY_QUESTION_LINE)
 	if not yes:
 		return

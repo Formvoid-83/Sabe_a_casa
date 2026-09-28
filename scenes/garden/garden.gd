@@ -2,6 +2,7 @@ extends Node2D
 
 const WORLD_LAYER := 1 # physics layer "World" — what the player's movement checks against
 
+
 # The three item types that can appear in the garden.
 @export var garden_items: Array[ItemData] = [
 	preload("res://resources/items/cilantro.tres"),
@@ -43,6 +44,8 @@ func _ready() -> void:
 	# Wait until the first bubble has fully closed, then show the next one.
 	await Bubbles.closed
 	Bubbles.say("cual sera cual????? :(", 3)
+
+
 
 
 # Surrounds the painted area of every TileMapLayer with solid cells, so the
