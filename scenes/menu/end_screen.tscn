@@ -1,9 +1,10 @@
-[gd_scene load_steps=3 format=3]
+[gd_scene format=3 uid="uid://cs2wecckwu1n7"]
 
-[ext_resource type="Script" path="res://scripts/menu/end_screen.gd" id="1_script"]
+[ext_resource type="Script" uid="uid://clhi38p62shul" path="res://scripts/menu/end_screen.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://cya442eos5l45" path="res://sprites/Sopa-de-mani.jpg" id="2_d3ujy"]
 [ext_resource type="FontFile" uid="uid://c2g44c0li6eh1" path="res://fonts/pixeloid.sans-bold.ttf" id="2_font"]
 
-[node name="EndScreen" type="Control"]
+[node name="EndScreen" type="Control" unique_id=1250735983]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -12,7 +13,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_script")
 
-[node name="Background" type="ColorRect" parent="."]
+[node name="Background" type="ColorRect" parent="." unique_id=1695157461]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -21,7 +22,17 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
-[node name="CenterContainer" type="CenterContainer" parent="."]
+[node name="TextureRect" type="TextureRect" parent="." unique_id=920216931]
+propagate_maximum_size = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_d3ujy")
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1660335549]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -29,11 +40,11 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=1161933830]
 layout_mode = 2
 theme_override_constants/separation = 24
 
-[node name="MessageLabel" type="Label" parent="CenterContainer/VBoxContainer"]
+[node name="MessageLabel" type="Label" parent="CenterContainer/VBoxContainer" unique_id=1504947459]
 custom_minimum_size = Vector2(600, 0)
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
@@ -43,7 +54,7 @@ text = "..."
 horizontal_alignment = 1
 autowrap_mode = 3
 
-[node name="MenuButton" type="Button" parent="CenterContainer/VBoxContainer"]
+[node name="MenuButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1627944189]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_font")

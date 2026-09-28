@@ -2,6 +2,7 @@ extends Control
 
 @onready var _message_label: Label = $CenterContainer/VBoxContainer/MessageLabel
 
+
 func _ready() -> void:
 	_message_label.text = GameOver.pending_message
 
