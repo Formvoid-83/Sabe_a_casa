@@ -1,10 +1,10 @@
-[gd_scene load_steps=4 format=3]
+[gd_scene format=3 uid="uid://cqa8rchmnlquk"]
 
-[ext_resource type="Script" path="res://scripts/menu/main_menu.gd" id="1_script"]
-[ext_resource type="Texture2D" uid="uid://c30fp0dbr4ahk" path="res://sprites/Background.png" id="2_bg"]
+[ext_resource type="Script" uid="uid://cdvfgx3vowa8c" path="res://scripts/menu/main_menu.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://bdn7fxxh7iv3s" path="res://sprites/House.png" id="2_247la"]
 [ext_resource type="FontFile" uid="uid://c2g44c0li6eh1" path="res://fonts/pixeloid.sans-bold.ttf" id="3_font"]
 
-[node name="MainMenu" type="Control"]
+[node name="MainMenu" type="Control" unique_id=317092949]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -13,18 +13,18 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_script")
 
-[node name="Background" type="TextureRect" parent="."]
+[node name="Background" type="TextureRect" parent="." unique_id=1984238732]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_bg")
+texture = ExtResource("2_247la")
 expand_mode = 1
 stretch_mode = 6
 
-[node name="CenterContainer" type="CenterContainer" parent="."]
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=528284465]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -32,11 +32,11 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=2135313223]
 layout_mode = 2
 theme_override_constants/separation = 24
 
-[node name="TitleLabel" type="Label" parent="CenterContainer/VBoxContainer"]
+[node name="TitleLabel" type="Label" parent="CenterContainer/VBoxContainer" unique_id=15646688]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("3_font")
@@ -44,18 +44,18 @@ theme_override_font_sizes/font_size = 48
 text = "El sazón del hogar"
 horizontal_alignment = 1
 
-[node name="Spacer" type="Control" parent="CenterContainer/VBoxContainer"]
+[node name="Spacer" type="Control" parent="CenterContainer/VBoxContainer" unique_id=221018625]
 custom_minimum_size = Vector2(0, 32)
 layout_mode = 2
 
-[node name="PlayButton" type="Button" parent="CenterContainer/VBoxContainer"]
+[node name="PlayButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=737212844]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_font")
 theme_override_font_sizes/font_size = 28
 text = "Play"
 
-[node name="QuitButton" type="Button" parent="CenterContainer/VBoxContainer"]
+[node name="QuitButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1230706578]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_font")
