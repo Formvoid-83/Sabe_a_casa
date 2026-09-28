@@ -11,15 +11,15 @@ signal updated
 signal completed
 
 const REQUIRED_ITEMS := {
-	"res://resources/items/book.tres": 5,      # Potatoe
+	"res://resources/items/potatoe.tres": 5,      # Potatoe
 	"res://resources/items/cilantro.tres": 5,  # Cilantro
-	"res://resources/items/glass.tres": 2,     # Egg
-	"res://resources/items/pot.tres": 3,       # Mushroom
-	"res://resources/items/candle.tres": 1,    # Cheese
+	"res://resources/items/egg.tres": 2,     # Egg
+	"res://resources/items/mushroom.tres": 3,       # Mushroom
+	"res://resources/items/cheese.tres": 1,    # Cheese
 	"res://resources/items/jar.tres": 1,       # Jar
-	"res://resources/items/saucer.tres": 1,    # Garlic
+	"res://resources/items/garlic.tres": 1,    # Garlic
 	"res://resources/items/broccoli.tres": 1,  # Broccoli
-	"res://resources/items/cup.tres": 1,       # Drumstick
+	"res://resources/items/drumstick.tres": 1,       # Drumstick
 }
 
 const POISON_ITEM_PATH := "res://resources/items/perejil.tres"

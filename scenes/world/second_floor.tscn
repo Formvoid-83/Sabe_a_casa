@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://di3r4gemcjehf" path="res://scenes/items/item.tscn" id="2_sg4xq"]
 [ext_resource type="PackedScene" uid="uid://bwy1t16irqh7e" path="res://scenes/interactables/Box.tscn" id="3_cta1q"]
 [ext_resource type="Resource" uid="uid://ds0axbli7vk67" path="res://resources/items/jar.tres" id="3_wav53"]
-[ext_resource type="Resource" uid="uid://dve1c1swdsm6k" path="res://resources/items/cup.tres" id="4_nsj6v"]
+[ext_resource type="Resource" uid="uid://dve1c1swdsm6k" path="res://resources/items/drumstick.tres" id="4_nsj6v"]
 [ext_resource type="Resource" uid="uid://cb8j1ouu5d86" path="res://resources/items/broccoli.tres" id="4_wav53"]
 
 [node name="SecondFloor" type="Node2D" unique_id=663669133]

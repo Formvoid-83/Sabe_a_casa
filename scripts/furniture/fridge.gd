@@ -2,7 +2,7 @@ extends StaticBody2D
 
 ## Easter egg: press Space near the fridge to get a cheese.
 
-const CHEESE_ITEM := preload("res://resources/items/candle.tres")
+const CHEESE_ITEM := preload("res://resources/items/cheese.tres")
 const CHEESE_SOUND := preload("res://sounds/cheese.ogg")
 
 @onready var _interact_area: Area2D = $InteractArea
